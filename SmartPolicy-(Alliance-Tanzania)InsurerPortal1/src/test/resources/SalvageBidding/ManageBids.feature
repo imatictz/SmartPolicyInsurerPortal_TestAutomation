@@ -3,7 +3,8 @@ Feature: Manage Bids
 
 Background: Launch browser and open application
 
-When user navigate on operation dropdown
+When user navigate on operation dropdown menu
+And user navigate on claims management menu
 And user navigate on salvage bidding option
 Then user click on manage bids
 

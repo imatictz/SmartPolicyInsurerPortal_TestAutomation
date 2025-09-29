@@ -2,25 +2,23 @@ package SmartAssistUpload;
 
 import java.util.Hashtable;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
 public class SmartAssistUpload {
 
-	@When("^user navigate on tools dropdown menu$")
+	@When("user navigate on tools dropdown menu")
 	public void user_navigate_on_tools_dropdown_menu() throws Throwable {
-	    Object[] input7=new Object[1];
-		input7[0]="//*[@id='MOD_INS_FRAUD']";
-		SeleniumOperations.actionClass(input7);
+	    Itl.CustomNavigateAction("//*[@id='MOD_INS_FRAUD']", "user navigate on tools dropdown menu", "NAVIGATE", 2000);
 	}
 
 	@Then("^user click on Smart Assist Upload option$")
 	public void user_click_on_Smart_Assist_Upload_option() throws Throwable {
-	    Object[] input7=new Object[1];
-		input7[0]="(//*[text()='Smart Assist Upload'])[1]";
-		SeleniumOperations.clickOnElement(input7);
+	    Itl.CustomClickEvent("//*[@id='span45']", "user click on Smart Assist Upload option", "CLICK", 2000);
+
 	}
 
 	@When("^user click on add button$")
@@ -44,10 +42,10 @@ public class SmartAssistUpload {
 	@When("^user select \"([^\"]*)\" as broker$")
 	public void user_select_as_broker(String broker) throws Throwable {
 	    Object[] input= new Object[4];
-		input[0]="//*[@id='s2id_MainContent_cmbBroker']";
-		input[1]="//*[@class='select2-input select2-focused']";
+		input[0]="//*[contains(@aria-controls,'cmbBroker')]";
+		input[1]="//*[@class='select2-search__field']";
 		input[2]=broker;
-		input[3]="//*[@class='select2-match']";
+		input[3]="//*[contains(@data-select2-id,'select2-MainContent_cmbBroker')]";
 		Hashtable<String,Object> output=SeleniumOperations.dropdown(input);	
 		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user select \\\"([^\\\"]*)\\\" as broker",output.get("MESSAGE").toString());
 	}

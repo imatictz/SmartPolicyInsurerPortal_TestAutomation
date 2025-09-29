@@ -1,41 +1,30 @@
 package PendingApprovalsClaimApproval;
 
 import java.util.Hashtable;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
 public class ClaimApproval {
 	
-	 @When("^user click on branch portal menu$")
-	 public void user_click_on_branch_portal_menu() throws Throwable {
-		 Object[] input=new Object[1];
-	     input[0]="//*[@id='MNU_BROKER_2']";
-		 Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		 HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user click on branch portal menu",output.get("MESSAGE").toString());
-         Thread.sleep(4000);
-	 }
-	 
-	 @When("^user navigate on operation dropdown menu$")
-	 public void user_navigate_on_operation_dropdown_menu() throws InterruptedException {
-	     Object[] input7=new Object[1];
-		 input7[0]="(//*[text()='Operation '])[1]";
-		 Hashtable<String,Object> output= SeleniumOperations.actionClass(input7);
-	     HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user navigate on operation dropdown menu",output.get("MESSAGE").toString());
-         Thread.sleep(2000); 
-	 }
-	 
-	 @When("^user Click on risk note menu$")
-	 public void user_Click_on_risk_note_menu() throws Throwable {
-		 Object[] input=new Object[1];
-		 input[0]="(//*[text()='Risk Note '])[1]";
-		 Hashtable<String,Object> output=   SeleniumOperations.clickOnElement(input);
-		 HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user Click on risk note menu",output.get("MESSAGE").toString());
-         Thread.sleep(2000);
-     }
+	@When("user navigate on operation dropdown menu")
+	public void user_navigate_on_operation_dropdown_menu() throws Throwable {
+	    Itl.CustomNavigateAction("//*[@id='span_Security_lc']", "user navigate on operation dropdown menu", "NAVIGATE", 2000);
+	}
+	@When("user navigate on approval management option")
+	public void user_navigate_on_approval_management_option() throws Throwable {
+	    Itl.CustomNavigateAction("//*[@id='MNU_APPROVAL']", "user navigate on approval management option", "NAVIGATE", 2000);
 
+	}
+	@Then("user click on claims approval option")
+	public void user_click_on_compliance_quotation_approval_option() throws InterruptedException {
+	    Itl.CustomClickEvent("//*[@id='span_claimApprv_lc']", "user click on compliance quotation approval option", "CLICK", 2000);
+	    
+	}
 	 @When("^user select \"([^\"]*)\" as from date$")
 	 public void user_select_as_date_from(String dateFrom) throws Throwable {
 		 Object[] input=new Object[2];
@@ -341,15 +330,9 @@ public class ClaimApproval {
 
 	 @When("^user click on insert claimant button$")
 	 public void user_click_on_insert_claimant_button() throws Throwable {
-		 Object[]input1=new Object[1];
-		 input1[0]="//*[@id='btnClaimantInsert']";
-		 SeleniumOperations.clickOnElement(input1);
 		 
-		 Object[]input=new Object[1];
-		 input[0]="//*[@id='btnClaimantInsert']";
-		 Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		 HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user click on insert claimant button",output.get("MESSAGE").toString());
-		 Thread.sleep(2000);
+		 Itl.CustomClickEvent("//*[@id='btnClaimantInsert']", "user click on insert claimant button", "CLICK", 2000);
+
 	 }
 
 	 

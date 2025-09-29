@@ -2,8 +2,8 @@ package FraudControl;
 
 import java.util.Hashtable;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
@@ -14,6 +14,7 @@ public class ClaimsRepository {
 		Object[] input7=new Object[1];
 		input7[0]="(//*[text()='Claim Repository'])[1]";
 		SeleniumOperations.clickOnElement(input7);
+		Thread.sleep(2000);
 	}
 
 	@When("^user enter \"([^\"]*)\" as insured name$")

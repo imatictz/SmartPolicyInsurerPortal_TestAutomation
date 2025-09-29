@@ -4,6 +4,7 @@ Feature: Bank Account GL Mapping (Digital Receipts Only)
 Background: 
  
 When user navigate on operation dropdown menu
+And user navigate on GL management
 Then user click on Bank Account GL Mapping (Digital Receipts Only) option
 
 @AllFields
@@ -14,5 +15,5 @@ Then user select "Demo Insurance Company Limited - Branch" as intermediary type
 When user enter "Cash" as payment mode
 Then user select "NMB Bank" as mapped payment mode
 When user select "Tanzanian Shillings" as Ccy
-When user select "" as GL bank account
+When user select "ABC Bank" as GL bank account
 And user click on save button

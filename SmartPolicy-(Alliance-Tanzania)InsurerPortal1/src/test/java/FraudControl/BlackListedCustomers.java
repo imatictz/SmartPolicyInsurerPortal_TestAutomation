@@ -2,25 +2,23 @@ package FraudControl;
 
 import java.util.Hashtable;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
 public class BlackListedCustomers {
 
-	@When("^user navigate on tools dropdown menu$")
+	@When("user navigate on tools dropdown menu")
 	public void user_navigate_on_tools_dropdown_menu() throws Throwable {
-	    Object[] input7=new Object[1];
-		input7[0]="//*[@id='MOD_INS_FRAUD']";
-		SeleniumOperations.actionClass(input7);
+	    Itl.CustomNavigateAction("//*[@id='MOD_INS_FRAUD']", "user navigate on tools dropdown menu", "NAVIGATE", 2000);
 	}
 
-	@When("^user navigate on fraud control menu$")
-	public void user_navigate_on_fraud_control_menu() throws Throwable {
-	    Object[] input7=new Object[1];
-		input7[0]="(//*[text()='Fraud Control'])[1]";
-		SeleniumOperations.actionClass(input7);
+	@When("user navigate on fraud control menu")
+	public void user_navigate_on_fraud_dropdown_menu() throws Throwable {
+	    Itl.CustomNavigateAction("//*[@id='span_IntegrationMonit_lc']", "user navigate on fraud control menu", "NAVIGATE", 2000);
 	}
 
 	@Then("^user click on Black Listed Customers option$")
@@ -28,6 +26,7 @@ public class BlackListedCustomers {
 	    Object[] input7=new Object[1];
 		input7[0]="(//*[text()='Black Listed Customers'])[1]";
 		SeleniumOperations.clickOnElement(input7);	
+		Thread.sleep(2000);
 	}
 
 	@When("^user click on add button$")
@@ -51,10 +50,10 @@ public class BlackListedCustomers {
 	@When("^user select \"([^\"]*)\" as ID type$")
 	public void user_select_as_ID_type(String idType) throws Throwable {
 	    Object[] input= new Object[4];
-		input[0]="//*[@id='s2id_MainContent_cmbIDType']";
-		input[1]="//*[@class='select2-input select2-focused']";
+		input[0]="//*[contains(@aria-controls,'cmbIDType')]";
+		input[1]="//*[@class='select2-search__field']";
 		input[2]=idType;
-		input[3]="//*[@class='select2-match']";
+		input[3]="//*[contains(@data-select2-id,'select2-MainContent_cmbIDType')]";
 		Hashtable<String,Object> output=SeleniumOperations.dropdown(input);	
 		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user select \\\"([^\\\"]*)\\\" as ID type",output.get("MESSAGE").toString());
 	}
@@ -121,11 +120,16 @@ public class BlackListedCustomers {
  	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user click on search button",output.get("MESSAGE").toString());
  	    Thread.sleep(2000);
 	}
+  
+	@When("user click on actions option")
+	public void user_click_on_actions_button() throws InterruptedException {
+	    Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[6]/*[2]", "user click on actions option", "CLICK", 2000);
 
+	}
 	@When("^user click on upload pictures icon$")
 	public void user_click_on_upload_pictures_icon() throws Throwable {
 	    Object[] input7=new Object[1];
- 		input7[0]="(//*[@class='AttachData fa fa-paperclip'])[4]";
+ 		input7[0]="(//*[@class='AttachData dropdown-item'])";
  	    Hashtable<String,Object>output=SeleniumOperations.clickOnElement(input7);
  	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user click on upload pictures icon",output.get("MESSAGE").toString());
  	    Thread.sleep(2000);
@@ -158,5 +162,26 @@ public class BlackListedCustomers {
 	  	Hashtable<String,Object>output=SeleniumOperations.validation(input);
 	  	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user able to view \\\"([^\\\"]*)\\\" as message",output.get("MESSAGE").toString());
 	  	Thread.sleep(2000);
+	}
+	
+	@When("user select {string} as client type")
+	public void user_select_as_client_type(String Clienttype) {
+	    Itl.CustomDropdownEvent("//*[contains(@aria-controls,'cmbBLCSType')]", "//*[@class='select2-search__field']", Clienttype, "//*[contains(@data-select2-id,'select2-MainContent_cmbBLCSType')]", "user select {string} as client type", "DROPDOWN", 0);
+
+	}
+	@When("user select {string} as business type")
+	public void user_select_as_business_type(String businessType) {
+	    Itl.CustomDropdownEvent("//*[contains(@aria-controls,'cmbBLCSBusType')]", "//*[@class='select2-search__field']", businessType, "//*[contains(@data-select2-id,'select2-MainContent_cmbBLCSBusType')]", "user select {string} as business type", "DROPDOWN", 0);
+
+	}
+	@When("user enter {string} as VRN No")
+	public void user_enter_as_vrn_no(String vrnNo) throws InterruptedException {
+	    Itl.CustomSendEvent("//*[@id='txtVRNNb']", vrnNo, "user enter {string} as VRN No", "TEXTBOX", 0);
+
+	}
+	@And("user enter {string} as TIN No\\(corporate)")
+	public void enter_Tin_no(String tinNo) throws InterruptedException {
+	    Itl.CustomSendEvent("//*[@id='txtTINNb']", tinNo, "user enter {string} as TIN No\\\\(corporate)", "TEXTBOX", 0);
+
 	}
 }

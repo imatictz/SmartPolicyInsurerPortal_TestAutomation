@@ -1,22 +1,18 @@
 package testRunner;
 
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
- 
-@RunWith(Cucumber.class)
 @CucumberOptions(  
-		           features="src/test/resources/Quotations/MoneyInsuranceCover.feature", 
-                   tags= {"@All"}, 
-                   glue={"cucumberMap1MoneyInsuranceCover","MyHooks"}, 
+		           features="src/test/resources/PendingApprovals/NonComplianceApproval.feature", 
+                   tags= "@Test", 
+                   glue={"PendingApprovalsNonCompliance","MyHooks"}, 
                    monochrome=true, 
-                   strict=true, 
                    plugin= "pretty",   
                    dryRun=false 
                  )
 
-public class RunnerTest 
+public class RunnerTest extends AbstractTestNGCucumberTests
 {     
 	
 }

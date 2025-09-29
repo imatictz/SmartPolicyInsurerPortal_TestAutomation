@@ -1,8 +1,10 @@
 package IntermediaryCommission;
 
 import java.util.Hashtable;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
@@ -28,6 +30,7 @@ public class VoucherBase {
 	    Object[] input4=new Object[1];
 	    input4[0]="//*[@id='MNU_WFCTXN']";
 	    SeleniumOperations.clickOnElement(input4);
+	    Thread.sleep(2000);
 	}
 
 	@When("^user click on add button to enter Commission Voucher details$")
@@ -35,34 +38,15 @@ public class VoucherBase {
 	    Object[] input4=new Object[1];
 	    input4[0]="//*[@id='MainContent_btnAdd']";
 	    SeleniumOperations.clickOnElement(input4);
-	}
-
-	@When("^user click on broker name dropdown$")
-	public void user_click_on_broker_name_dropdown() throws Throwable {
-	    Object[] input=new Object[1];
-		input[0]="(//*[@class='select2-chosen'])[3]";
-		Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user click on broker name dropdown",output.get("MESSAGE").toString());
-		Thread.sleep(2000);
-	}
-
-	@When("^user enter \"([^\"]*)\" as broker name$")
-	public void user_enter_as_broker_name(String brokerName) throws Throwable {
-	    Object[] input=new Object[2];
-	    input[0]="//*[@class='select2-input select2-focused']";
-	    input[1]=brokerName;
-	    Hashtable<String,Object> output= SeleniumOperations.sendKeys(input);
-	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user enter \\\"([^\\\"]*)\\\" as broker name",output.get("MESSAGE").toString());
-	}
-
-	@Then("^user select Demo Insurance Brokers \\(T\\) Limited\\. as broker name$")
-	public void user_select_Demo_Insurance_Brokers_T_Limited_as_broker_name() throws Throwable {
-	    Object[]input=new Object[1];
-		input[0]="//*[@class='select2-match']";
-		Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user select Demo Insurance Brokers \\\\(T\\\\) Limited\\\\. as broker name",output.get("MESSAGE").toString());
 	    Thread.sleep(2000);
 	}
+	@When("user select {string} as broker name")
+	public void user_select_as_broker_name(String brokerName) {
+	    Itl.CustomDropdownEvent("//*[@id='s2id_MainContent_cmbBrokerName']", "//*[@class='select2-input select2-focused']", brokerName , "//*[@class='select2-match']", "user select {string} as broker name", "DROPDOWN", 2000);
+
+	}
+	
+	
 
 	@When("^user enter \"([^\"]*)\" as amount$")
 	public void user_enter_as_amount(String amount) throws Throwable {
@@ -74,31 +58,9 @@ public class VoucherBase {
 	    Thread.sleep(2000);
 	}
 
-	@When("^user click on mode dropdown$")
-	public void user_click_on_mode_dropdown() throws Throwable {
-	    Object[] input=new Object[1];
-		input[0]="(//*[@class='select2-chosen'])[5]";
-		Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user click on mode dropdown",output.get("MESSAGE").toString());
-		Thread.sleep(2000);
-	}
-
-	@When("^user enter \"([^\"]*)\" as mode$")
-	public void user_enter_as_mode(String mode) throws Throwable {
-	    Object[] input=new Object[2];
-	    input[0]="//*[@class='select2-input select2-focused']";
-	    input[1]=mode;
-	    Hashtable<String,Object> output= SeleniumOperations.sendKeys(input);
-	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user enter \\\"([^\\\"]*)\\\" as mode",output.get("MESSAGE").toString());
-	}
-
-	@Then("^user select Card Payment as mode$")
-	public void user_select_Card_Payment_as_mode() throws Throwable {
-	    Object[]input=new Object[1];
-		input[0]="//*[@class='select2-match']";
-		Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
-		HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user select Card Payment as mode",output.get("MESSAGE").toString());
-		Thread.sleep(2000);
+	@When("user select {string} as mode")
+	public void user_select_as_mode(String mode) {
+	    Itl.CustomDropdownEvent("//*[@id='s2id_MainContent_cmbMode']", "//*[@class='select2-input select2-focused']", mode , "//*[@class='select2-match']", "user select {string} as mode", "DROPDOWN", 2000);
 	}
 
 	@When("^user enter \"([^\"]*)\" as Cheque/ Reference Number$")

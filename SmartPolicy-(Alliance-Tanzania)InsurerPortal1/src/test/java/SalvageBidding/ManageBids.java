@@ -1,31 +1,36 @@
 package SalvageBidding;
 
 import java.util.Hashtable;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
 public class ManageBids {
 
- 	@When ("^user navigate on operation dropdown$")
- 	public void user_navigate_on_operation_dropdown_menu() {
-		Object[] input7=new Object[1];
-	    input7[0]="(//*[@class='dropdown-toggle'])[1]";
-	    SeleniumOperations.clickOnElement(input7);
-    }
+	@When("user navigate on operation dropdown menu")
+	public void user_navigate_on_operation_dropdown_menu() throws Throwable {
+	    Itl.CustomNavigateAction("//*[@id='span_Security_lc']", "user navigate on operation dropdown menu", "NAVIGATE", 8000);
+	}
+	
+	@When("^user navigate on claims management menu$")
+	 public void user_navigate_on_claims_management_menu() throws Throwable {
+		    Itl.CustomNavigateAction("//*[text()='Claims Management']", "user navigate on claims management menu", "NAVIGATE", 8000);
+
+	 }
  	
  	@When("^user navigate on salvage bidding option$")
  	public void user_navigate_on_salvage_bidding_option() throws Throwable {
- 	    Object[]input=new Object[1];
- 	    input[0]="//*[@id='MNU_SALVAGE']";
- 	    SeleniumOperations.actionClass(input);
+	    Itl.CustomNavigateAction("//*[@id='span13']", "user navigate on salvage bidding option", "NAVIGATE", 4000);
+
  	}
 
  	@Then("^user click on manage bids$")
  	public void user_click_on_manage_bids() throws Throwable {
  	    Object[] input7=new Object[1];
- 		input7[0]="//*[@id='MNU_wfSLVG']";
+ 		input7[0]="//*[@id='span14']";
  		SeleniumOperations.clickOnElement(input7);
  	}
 

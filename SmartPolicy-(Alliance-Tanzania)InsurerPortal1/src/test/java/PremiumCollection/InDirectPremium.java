@@ -1,8 +1,9 @@
 package PremiumCollection;
 
 import java.util.Hashtable;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 

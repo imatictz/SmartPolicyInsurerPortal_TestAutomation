@@ -76,6 +76,12 @@ public class ConfigReader{
 		if(url != null) return url;
 		else throw new RuntimeException("password not specified in the Configuration.properties file.");
 	}
+	
+	public String getLanguageName() {
+		String languageName = properties.getProperty("languageName");
+		if(languageName != null) return languageName;
+		else throw new RuntimeException("languageName not specified in the Configuration.properties file.");
+	}
 }
 
 
