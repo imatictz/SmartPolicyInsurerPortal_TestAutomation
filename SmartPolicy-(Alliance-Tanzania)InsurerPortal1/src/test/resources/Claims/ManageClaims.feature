@@ -119,7 +119,7 @@ When user enter Received Final Report details:
       | Country                  | Tanzania                                   |
       | Region/City              | Dodoma                                     |
       | District                 | Bahi                                       |
-      | Assessment Date          | 26-Sep-2025                                 |
+      | Assessment Date          | 26-Sep-2025                                |
       | Reference Date           | 26-Sep-2025                                 |  
 When user select repair checkbox as assessor decision
 When user click on save button to save feedback

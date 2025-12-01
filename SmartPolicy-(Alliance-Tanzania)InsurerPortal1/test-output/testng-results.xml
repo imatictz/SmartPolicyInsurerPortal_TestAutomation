@@ -1,457 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="0" failed="1" skipped="0">
+<testng-results total="43" passed="42" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-26T14:04:10Z" name="Default suite" finished-at="2025-09-26T14:09:28Z" duration-ms="317734">
+  <suite started-at="2025-11-27T05:30:03Z" name="Default suite" finished-at="2025-11-27T06:08:27Z" duration-ms="2303845">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-26T14:04:10Z" name="Default test" finished-at="2025-09-26T14:09:28Z" duration-ms="317734">
-      <class name="testRunner.RunnerTestManageClaims">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-09-26T17:04:10Z" name="setUpClass" finished-at="2025-09-26T17:04:11Z" duration-ms="732" status="PASS">
+    <test started-at="2025-11-27T05:30:03Z" name="Default test" finished-at="2025-11-27T06:08:27Z" duration-ms="2303845">
+      <class name="testRunner.RunnerTestReports">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:30:03Z" name="setUpClass" finished-at="2025-11-27T08:30:04Z" duration-ms="544" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@68d8ae27]]>
+                <![CDATA[org.testng.TestRunner@60ec202b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-09-26T17:04:11Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-26T17:09:28Z" duration-ms="316951" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:30:04Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:31:01Z" duration-ms="57621" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user able to manage claims successfully"]]>
+                <![CDATA["Verify user able to view Business Summary (Base Currency)(RPTINS245)report successfully"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Manage claims"]]>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:31:01Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:31:58Z" duration-ms="56551" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Business Summary (Base Currency) by Branch(RPTINS205)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:31:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:32:52Z" duration-ms="53971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Business Summary (Base Currency) by Channel(RPTINS206)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:32:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:33:48Z" duration-ms="56297" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Business Summary (Base Currency) by Product(RPTINS204)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:33:48Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:34:33Z" duration-ms="45003" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Monthly Performance Report by Branch(RPTINS202)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:34:33Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:35:14Z" duration-ms="41276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Monthly Performance Report by Channel(RPTINS201)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:35:14Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:36:13Z" duration-ms="58200" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Monthly Performance Report by Class(RPTINS203)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
               </value>
             </param>
           </params>
           <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[The step 'user click on display icon to check claim reserve' and 42 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
+              <![CDATA[The step 'user able to view "Monthly Performance Report by Class" in pdf format' is undefined.
+You can implement this step using the snippet(s) below:
 
-@When("user click on display icon to check claim reserve")
-public void user_click_on_display_icon_to_check_claim_reserve() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on claim reserve icon")
-public void user_click_on_claim_reserve_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user able to view {string} as status in reserve transactions")
-public void user_able_to_view_as_status_in_reserve_transactions(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as status from dropdown")
-public void user_select_as_status_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as claimant from dropdown")
-public void user_select_as_claimant_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown")
-public void user_select_as_assessor_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as Loss Assessment Option from dropdown")
-public void user_select_as_loss_assessment_option_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor id from dropdown")
-public void user_select_as_assessor_id_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as assessor id number")
-public void user_enter_as_assessor_id_number(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on save button")
-public void user_click_on_save_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as status from dropdown for Preliminary Report")
-public void user_select_as_status_from_dropdown_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown for Preliminary Report")
-public void user_select_as_assessor_from_dropdown_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as assesed amount for Preliminary Report")
-public void user_enter_as_assesed_amount_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as reference number for Preliminary Report")
-public void user_enter_as_reference_number_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on issue claim note icon")
-public void user_click_on_issue_claim_note_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as claimant name from dropdown")
-public void user_select_as_claimant_name_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as claim amount")
-public void user_enter_as_claim_amount(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown for claim note")
-public void user_select_as_assessor_from_dropdown_for_claim_note(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user select {string} as claimant payee from dropdown")
-public void user_select_as_claimant_payee_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on excess applicable checkbox")
-public void user_click_on_excess_applicable_checkbox() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as first excess from dropdown")
-public void user_select_as_first_excess_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as excess percent for first excess")
-public void user_enter_as_excess_percent_for_first_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as excess amount for first excess")
-public void user_enter_as_excess_amount_for_first_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as second excess from dropdown")
-public void user_select_as_second_excess_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as excess percent for second excess")
-public void user_enter_as_excess_percent_for_second_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as excess amount for second excess")
-public void user_enter_as_excess_amount_for_second_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as total claim excess")
-public void user_enter_as_total_claim_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as less betterment\\/Depreciation")
-public void user_enter_as_less_betterment_depreciation(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as young\\/Inexperience Driver")
-public void user_enter_as_young_inexperience_driver(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as salvage")
-public void user_enter_as_salvage(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as under insurance contribution")
-public void user_enter_as_under_insurance_contribution(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on amount includes withhold tax checkbox")
-public void user_click_on_amount_includes_withhold_tax_checkbox() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as recomendation")
-public void user_enter_as_recomendation(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on dispay icon")
-public void user_click_on_dispay_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on approve icon")
-public void user_click_on_approve_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on approve button")
-public void user_click_on_approve_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on accept icon")
-public void user_click_on_accept_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as reference date")
-public void user_enter_as_reference_date(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as reference number")
-public void user_enter_as_reference_number(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} receive date")
-public void user_enter_receive_date(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on Payment Requistion icon")
-public void user_click_on_payment_requistion_icon() {
+@Then("user able to view {string} in pdf format")
+public void user_able_to_view_in_pdf_format(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user click on display icon to check claim reserve' and 42 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user able to view "Monthly Performance Report by Class" in pdf format' is undefined.
+You can implement this step using the snippet(s) below:
 
-@When("user click on display icon to check claim reserve")
-public void user_click_on_display_icon_to_check_claim_reserve() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on claim reserve icon")
-public void user_click_on_claim_reserve_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user able to view {string} as status in reserve transactions")
-public void user_able_to_view_as_status_in_reserve_transactions(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as status from dropdown")
-public void user_select_as_status_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as claimant from dropdown")
-public void user_select_as_claimant_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown")
-public void user_select_as_assessor_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as Loss Assessment Option from dropdown")
-public void user_select_as_loss_assessment_option_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor id from dropdown")
-public void user_select_as_assessor_id_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as assessor id number")
-public void user_enter_as_assessor_id_number(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on save button")
-public void user_click_on_save_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as status from dropdown for Preliminary Report")
-public void user_select_as_status_from_dropdown_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown for Preliminary Report")
-public void user_select_as_assessor_from_dropdown_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as assesed amount for Preliminary Report")
-public void user_enter_as_assesed_amount_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as reference number for Preliminary Report")
-public void user_enter_as_reference_number_for_preliminary_report(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on issue claim note icon")
-public void user_click_on_issue_claim_note_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as claimant name from dropdown")
-public void user_select_as_claimant_name_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as claim amount")
-public void user_enter_as_claim_amount(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as assessor from dropdown for claim note")
-public void user_select_as_assessor_from_dropdown_for_claim_note(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user select {string} as claimant payee from dropdown")
-public void user_select_as_claimant_payee_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on excess applicable checkbox")
-public void user_click_on_excess_applicable_checkbox() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as first excess from dropdown")
-public void user_select_as_first_excess_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as excess percent for first excess")
-public void user_enter_as_excess_percent_for_first_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as excess amount for first excess")
-public void user_enter_as_excess_amount_for_first_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user select {string} as second excess from dropdown")
-public void user_select_as_second_excess_from_dropdown(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as excess percent for second excess")
-public void user_enter_as_excess_percent_for_second_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as excess amount for second excess")
-public void user_enter_as_excess_amount_for_second_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as total claim excess")
-public void user_enter_as_total_claim_excess(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as less betterment\\/Depreciation")
-public void user_enter_as_less_betterment_depreciation(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as young\\/Inexperience Driver")
-public void user_enter_as_young_inexperience_driver(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as salvage")
-public void user_enter_as_salvage(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as under insurance contribution")
-public void user_enter_as_under_insurance_contribution(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on amount includes withhold tax checkbox")
-public void user_click_on_amount_includes_withhold_tax_checkbox() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} as recomendation")
-public void user_enter_as_recomendation(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on dispay icon")
-public void user_click_on_dispay_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on approve icon")
-public void user_click_on_approve_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user click on approve button")
-public void user_click_on_approve_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on accept icon")
-public void user_click_on_accept_icon() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as reference date")
-public void user_enter_as_reference_date(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user enter {string} as reference number")
-public void user_enter_as_reference_number(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("user enter {string} receive date")
-public void user_enter_receive_date(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("user click on Payment Requistion icon")
-public void user_click_on_payment_requistion_icon() {
+@Then("user able to view {string} in pdf format")
+public void user_able_to_view_in_pdf_format(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -494,11 +190,587 @@ public void user_click_on_payment_requistion_icon() {
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-09-26T17:09:28Z" name="tearDownClass" finished-at="2025-09-26T17:09:28Z" duration-ms="9" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:36:13Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:37:05Z" duration-ms="52482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Outstanding Detail (Currency wise) by Class(RPTINS232)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:37:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:37:56Z" duration-ms="50685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Outstanding Report ( Claimant wise)(RPTINS296)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:37:56Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:38:47Z" duration-ms="51379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Outstanding Summary (Base Currency) by Branch(RPTINS248)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:38:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:39:40Z" duration-ms="53122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Outstanding Summary (Base Currency) by Channel(RPTINS230)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:39:40Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:40:32Z" duration-ms="51620" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Outstanding Summary (Base Currency) by Class(RPTINS231)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:40:32Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:41:26Z" duration-ms="54099" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Report (Beyond 45 Days)(RPTINS252)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:41:26Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:42:20Z" duration-ms="53725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Report (Currency wise) by Payee Type(RPTINS242)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:42:20Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:43:13Z" duration-ms="52937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Summary (Base Currency) by Branch(RPTINS241)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:43:13Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:44:04Z" duration-ms="51536" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Summary (Base Currency) by Channel(RPTINS249)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:44:04Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:44:57Z" duration-ms="52776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Summary (Base Currency) by Class(RPTINS240)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:44:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:45:51Z" duration-ms="54033" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Paid Summary (Base Currency) by Payee Type(RPTINS239)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:45:51Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:46:44Z" duration-ms="52884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Ratio (Base Currency) by Channel(RPTINS257)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:46:44Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:47:38Z" duration-ms="54373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Ratio (Base Currency) by Class(RPTINS256)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:47:38Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:48:34Z" duration-ms="55736" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Register Detail (Currency wise) by class(RPTINS229)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:48:34Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:49:27Z" duration-ms="53262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Register Summary (Base Currency) by Branch(RPTINS228)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:49:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:50:20Z" duration-ms="52519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Register Summary (Base Currency) by Channel(RPTINS226)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:50:20Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:51:12Z" duration-ms="52569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Register Summary (Base Currency) by Class(RPTINS227)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:51:12Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:52:05Z" duration-ms="52171" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Rejected Report(RPTINS253)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:52:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:52:54Z" duration-ms="49059" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Requisitions Pending Detail (by Payee Type)(RPTINS237)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:52:54Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:53:47Z" duration-ms="52936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Requisitions Pending Summary (by Payee Type)(RPTINS235)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:53:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:54:37Z" duration-ms="49991" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Requisitions Register (By Payee Type)(RPTINS234)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:54:37Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:55:29Z" duration-ms="52591" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Requisitions Summary (by Payee Type)(RPTINS251)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:55:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:56:22Z" duration-ms="52461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Reserves Movement Summary (Base Currency) by Class(RPTINS283)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:56:22Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:57:16Z" duration-ms="54709" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Reserves Movement Summary (Base Currency) by Type(RPTINS284)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:57:16Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:58:10Z" duration-ms="53948" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Reserves Movement (Base Currency) by Date(RPTINS285)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:58:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:59:05Z" duration-ms="54601" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Settled Report (Currency wise) by Payee Type(RPTINS289)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:59:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T08:59:58Z" duration-ms="53481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Settled Summary (Base Currency) by Branch(RPTINS291)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T08:59:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:00:52Z" duration-ms="53320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Settled Summary (Base Currency) by Channel(RPTINS292)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:00:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:01:47Z" duration-ms="55115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Settled Summary (Base Currency) by Class(RPTINS293)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:01:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:02:43Z" duration-ms="56564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Claims Settled Summary (Base Currency) by Payee Type(RPTINS294)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:02:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:03:45Z" duration-ms="61605" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Commission Payable Report(RPTINS50)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:03:45Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:04:40Z" duration-ms="54729" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Commission Payable Report (User Wise)(RPTINS44)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:04:40Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:05:39Z" duration-ms="59069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Commission Payable Report By Channel(RPTINS222)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:05:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:06:33Z" duration-ms="53860" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Commission Requisitions Pending(RPTINS223)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:06:33Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:07:33Z" duration-ms="60603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Commission Statement By Channel(RPTINS224)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:07:33Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-27T09:08:27Z" duration-ms="53684" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user able to view Reinsurer Premium Register(RPTINS41)report successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reports"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestReports@4f5991f6]" started-at="2025-11-27T09:08:27Z" name="tearDownClass" finished-at="2025-11-27T09:08:27Z" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- testRunner.RunnerTestManageClaims -->
+      </class> <!-- testRunner.RunnerTestReports -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

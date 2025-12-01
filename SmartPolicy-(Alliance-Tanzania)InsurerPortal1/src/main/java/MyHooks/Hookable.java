@@ -11,7 +11,7 @@ import utility.SeleniumOperations;
 public class Hookable {
 	@Before(order=0)
 	public void before(Scenario Scenario) throws UnknownHostException{   
-		HTMLReportGenerator.TestSuiteStart("C:\\TestReport\\TestReport23Sep.html","SmartPolicy");
+		HTMLReportGenerator.TestSuiteStart("C:\\TestReport\\TestReport27Nov.html","SmartPolicy");
 		HTMLReportGenerator.TestCaseStart(Scenario.getName(),Scenario.getStatus().toString());
 		System.out.println("--------------------Scenario Start---------------------");
 	}
@@ -62,9 +62,9 @@ public class Hookable {
 		Thread.sleep(2000);
 	}
 	
-	/*@After(order=1)
+	@After(order=1)
 	public void browserColse() {
 		SeleniumOperations.browserClose();
 
-	}*/
+	}
 }

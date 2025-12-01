@@ -1,9 +1,21 @@
 package utility;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.io.PrintWriter;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,6 +29,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class SeleniumOperations {
 	
@@ -598,6 +612,146 @@ private static String claimId;
    public static String getStoredClaimId() {
        return claimId;
    }
+ //printReport     
+   
+   public static Hashtable<String, Object> printReport() throws IOException {
+  	try {
+
+  	Set<String> ids1 = driver.getWindowHandles();
+  	
+  	Iterator<String> values = ids1.iterator();    
+  	String one = values.next();
+  	String two = values.next();
+  	
+      driver.switchTo().window(two);
+  	
+  	String url = driver.getCurrentUrl();
+  	System.out.println(url);
+  	 
+  	URL pdfUrl = new URL(url);
+  	
+  	URLConnection urlConnection = pdfUrl.openConnection();
+  	urlConnection.addRequestProperty("User-Agent", "Chrome");
+  	InputStream id = urlConnection.getInputStream();
+  	
+  	BufferedInputStream bufferedInput = new BufferedInputStream(id);
+  	
+  	System.out.println("==========Print Page Number Of Pdf==========");
+  	PDDocument pdDocument = PDDocument.load(bufferedInput);
+  	int pages = pdDocument.getNumberOfPages();
+  	System.out.println("Number Of Pages In PDF"+" "+pages);
+      System.out.println("==========End==========");
+      //.load(bufferedInput);
+      PDFTextStripper text = new PDFTextStripper();
+      String printText = text.getText(pdDocument);
+      System.out.println("==========Print PDF Text==========");
+      System.out.println("PDF Text" +" "+printText);
+      System.out.println("==========End==========");
+    
+     outputparameters.put("STATUS","Pass");
+
+	   outputparameters.put("MESSAGE","Method Used:PrintReport, Input Given:");
+  	}
+  	catch(Exception e) {
+ 		 outputparameters.put("STATUS","Fail");
+		   outputparameters.put("MESSAGE","Method Used:PrintReport, Input Given:");
+  	}
+		return outputparameters;
+		 	 
+ 	 }
+   
+   public static Hashtable<String, Object> printReport1() {
+	    Hashtable<String, Object> outputParameters = new Hashtable<>();
+
+	    try {
+	        // Wait for the new window to open
+	        Set<String> windowHandles = driver.getWindowHandles();
+	        if (windowHandles.size() < 2) {
+	            throw new IllegalStateException("No PDF window detected. Expected at least 2 windows.");
+	        }
+
+	        // ✅ Get current (main) window handle safely
+	        String mainWindow = driver.getWindowHandle();
+	        String pdfWindow = null;
+
+	        // ✅ Find new window reliably (order-independent)
+	        for (String handle : windowHandles) {
+	            if (!handle.equals(mainWindow)) {
+	                pdfWindow = handle;
+	                break;
+	            }
+	        }
+
+	        if (pdfWindow == null) {
+	            throw new IllegalStateException("No new PDF window found.");
+	        }
+
+	        driver.switchTo().window(pdfWindow);
+
+	        // ✅ Small wait to ensure URL is loaded (avoid about:blank)
+	        new WebDriverWait(driver, Duration.ofSeconds(5))
+	            .until(d -> !d.getCurrentUrl().startsWith("about:blank"));
+
+	        String pdfUrlString = driver.getCurrentUrl();
+	        System.out.println("✅ PDF URL: " + pdfUrlString);
+
+	        URL pdfUrl = new URL(pdfUrlString);
+	        URLConnection connection = pdfUrl.openConnection();
+	        connection.addRequestProperty("User-Agent", "Mozilla/5.0 (Chrome)");
+	        connection.setConnectTimeout(10000); // 10s timeout
+	        connection.setReadTimeout(15000);    // 15s timeout
+
+	        // ✅ Use try-with-resources for auto-closing
+	        try (InputStream inputStream = connection.getInputStream();
+	             BufferedInputStream bufferedStream = new BufferedInputStream(inputStream);
+	             PDDocument pdfDocument = PDDocument.load(bufferedStream)) {
+
+	            int totalPages = pdfDocument.getNumberOfPages();
+	            System.out.println("📄 Total PDF Pages: " + totalPages);
+
+	            PDFTextStripper textStripper = new PDFTextStripper();
+	            String pdfText = textStripper.getText(pdfDocument);
+
+	            System.out.println("========== PDF Text Content ==========");
+	            System.out.println(pdfText);
+	            System.out.println("=====================================");
+
+	            // ✅ Store extracted info for reporting
+	            outputParameters.put("PDF_URL", pdfUrlString);
+	            outputParameters.put("PDF_PAGE_COUNT", totalPages);
+	            outputParameters.put("PDF_TEXT_SAMPLE", pdfText.substring(0, Math.min(500, pdfText.length())));
+	            outputParameters.put("STATUS", "Pass");
+	            outputParameters.put("MESSAGE", "Method Used: printReport executed successfully.");
+	        }
+
+	        // ✅ Return to main window safely
+	       // driver.close(); // close PDF tab
+	       // driver.switchTo().window(mainWindow);
+
+	    } catch (MalformedURLException e) {
+	        System.err.println("❌ Invalid PDF URL: " + e.getMessage());
+	        outputParameters.put("STATUS", "Fail");
+	        outputParameters.put("MESSAGE", "Invalid PDF URL: " + e.getMessage());
+	    } catch (IOException e) {
+	        System.err.println("❌ Error reading PDF: " + e.getMessage());
+	        outputParameters.put("STATUS", "Fail");
+	        outputParameters.put("MESSAGE", "Error reading PDF content: " + e.getMessage());
+	    } catch (Exception e) {
+	        // Capture full stack trace for UI-friendly report
+	        StringWriter sw = new StringWriter();
+	        e.printStackTrace(new PrintWriter(sw));
+	        String exceptionAsString = sw.toString();
+
+	        System.err.println("❌ Unexpected error in printReport: " + exceptionAsString);
+	        outputParameters.put("STATUS", "Fail");
+	        outputParameters.put("MESSAGE", "Unexpected error: " + exceptionAsString);
+	    }
+
+
+	    return outputParameters;
+	}
+
+
 }		 
 
 	
