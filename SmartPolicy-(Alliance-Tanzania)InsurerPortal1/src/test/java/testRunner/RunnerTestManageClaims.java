@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(  
 		           features="src/test/resources/Claims/ManageClaims.feature", 
-                   tags= "@ManageClaims", 
+                   tags= "@All", 
                    glue={"ManageClaims","MyHooks"}, 
                    monochrome=true, 
                    plugin= "pretty",   

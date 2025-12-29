@@ -52,6 +52,31 @@ public class Itl {
 		}
 	}
 	
+	public static void CustomSendTodaysDateEvent(
+	        String strElementXpath,
+	        String dateValue,
+	        String stepName,
+	        String strElementType,
+	        int intThreadSleepTime
+	) throws InterruptedException {
+
+	    if ("TEXTBOX".equalsIgnoreCase(strElementType)) {
+
+	        Object[] input = new Object[2];
+	        input[0] = strElementXpath;
+	        input[1] = dateValue;
+
+	        Hashtable<String, Object> output = SeleniumOperations.sendDate(input);
+	        HTMLReportGenerator.StepDetails(
+	                output.get("STATUS").toString(),
+	                stepName,
+	                output.get("MESSAGE").toString()
+	        );
+	        Thread.sleep(intThreadSleepTime);
+	    }
+	}
+
+	
 	public static void CustomClearSendEvent(String strElementId,String strInputText,String stepName,
 			String strElementType, int intThreadSleepTime ) throws InterruptedException {
 			/*strElementType can be as follows: Textbooks, Dropdown, RadioButton, CheckBox*/

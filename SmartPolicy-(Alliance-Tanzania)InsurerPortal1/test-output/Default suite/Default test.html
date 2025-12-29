@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>42/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 27 08:30:03 EAT 2025</td>
+<td>Started on:</td><td>Mon Dec 29 09:47:07 EAT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>2303 seconds (2303845 ms)</td>
+<tr><td>Total time:</td><td>4524 seconds (4524910 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,102 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Monthly Performance Report by Class(RPTINS203)report successfully", "Reports"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user able to view &quot;Monthly Performance Report by Class&quot; in pdf format&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;user able to view {string} in pdf format&quot;)
-public void user_able_to_view_in_pdf_format(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1989714905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1989714905'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user able to view &quot;Monthly Performance Report by Class&quot; in pdf format&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;user able to view {string} in pdf format&quot;)
-public void user_able_to_view_in_pdf_format(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>58</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -171,215 +75,60 @@ public void user_able_to_view_in_pdf_format(String string) {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Business Summary (Base Currency)(RPTINS245)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Accidental Damage Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>57</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>311</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Business Summary (Base Currency) by Branch(RPTINS205)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Bonds Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>56</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>289</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Business Summary (Base Currency) by Channel(RPTINS206)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Burglary Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>290</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Business Summary (Base Currency) by Product(RPTINS204)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Credit Life Insurance Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>56</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>290</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Monthly Performance Report by Branch(RPTINS202)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Fidelity Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>45</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>886</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Monthly Performance Report by Channel(RPTINS201)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Fire and Burglary Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>41</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>350</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Outstanding Detail (Currency wise) by Class(RPTINS232)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Fire Class Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>291</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Outstanding Report ( Claimant wise)(RPTINS296)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Group Life Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>50</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>349</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Outstanding Summary (Base Currency) by Branch(RPTINS248)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Medical Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>51</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>349</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Outstanding Summary (Base Currency) by Channel(RPTINS230)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Pension Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>290</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 <tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Outstanding Summary (Base Currency) by Class(RPTINS231)report successfully", "Reports"</td>
+<td title='testRunner.RunnerTestManageClaims.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestManageClaims<br>Test method: Runs Cucumber Scenarios<br>Parameters: "(Manage Motor Claim)Verify user able to manage claims successfully", "Manage claims"</td>
 <td></td>
-<td>51</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Report (Beyond 45 Days)(RPTINS252)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Report (Currency wise) by Payee Type(RPTINS242)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Summary (Base Currency) by Branch(RPTINS241)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Summary (Base Currency) by Channel(RPTINS249)report successfully", "Reports"</td>
-<td></td>
-<td>51</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Summary (Base Currency) by Class(RPTINS240)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Paid Summary (Base Currency) by Payee Type(RPTINS239)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Ratio (Base Currency) by Channel(RPTINS257)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Ratio (Base Currency) by Class(RPTINS256)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Register Detail (Currency wise) by class(RPTINS229)report successfully", "Reports"</td>
-<td></td>
-<td>55</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Register Summary (Base Currency) by Branch(RPTINS228)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Register Summary (Base Currency) by Channel(RPTINS226)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Register Summary (Base Currency) by Class(RPTINS227)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Rejected Report(RPTINS253)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Requisitions Pending Detail (by Payee Type)(RPTINS237)report successfully", "Reports"</td>
-<td></td>
-<td>49</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Requisitions Pending Summary (by Payee Type)(RPTINS235)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Requisitions Register (By Payee Type)(RPTINS234)report successfully", "Reports"</td>
-<td></td>
-<td>49</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Requisitions Summary (by Payee Type)(RPTINS251)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Reserves Movement Summary (Base Currency) by Class(RPTINS283)report successfully", "Reports"</td>
-<td></td>
-<td>52</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Reserves Movement Summary (Base Currency) by Type(RPTINS284)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Reserves Movement (Base Currency) by Date(RPTINS285)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Settled Report (Currency wise) by Payee Type(RPTINS289)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Settled Summary (Base Currency) by Branch(RPTINS291)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Settled Summary (Base Currency) by Channel(RPTINS292)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Settled Summary (Base Currency) by Class(RPTINS293)report successfully", "Reports"</td>
-<td></td>
-<td>55</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Claims Settled Summary (Base Currency) by Payee Type(RPTINS294)report successfully", "Reports"</td>
-<td></td>
-<td>56</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Commission Payable Report(RPTINS50)report successfully", "Reports"</td>
-<td></td>
-<td>61</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Commission Payable Report (User Wise)(RPTINS44)report successfully", "Reports"</td>
-<td></td>
-<td>54</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Commission Payable Report By Channel(RPTINS222)report successfully", "Reports"</td>
-<td></td>
-<td>59</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Commission Requisitions Pending(RPTINS223)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Commission Statement By Channel(RPTINS224)report successfully", "Reports"</td>
-<td></td>
-<td>60</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
-<tr>
-<td title='testRunner.RunnerTestReports.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestReports<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user able to view Reinsurer Premium Register(RPTINS41)report successfully", "Reports"</td>
-<td></td>
-<td>53</td>
-<td>testRunner.RunnerTestReports@4f5991f6</td></tr>
+<td>824</td>
+<td>testRunner.RunnerTestManageClaims@4f5991f6</td></tr>
 </table><p>
 </body>
 </html>

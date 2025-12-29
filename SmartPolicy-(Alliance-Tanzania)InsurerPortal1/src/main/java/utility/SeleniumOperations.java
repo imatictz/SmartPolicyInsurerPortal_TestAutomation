@@ -31,6 +31,8 @@ import org.testng.asserts.SoftAssert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class SeleniumOperations {
 	
@@ -342,7 +344,7 @@ public class SeleniumOperations {
 		 try {
 		   driver.manage().timeouts().implicitlyWait(config.getImplicitlyWait(),TimeUnit.SECONDS);
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
-		   js.executeScript("window.scrollBy(0,-750)");
+		   js.executeScript("window.scrollBy(0,-950)");
 		   outputparameters.put("STATUS","PASS");
 		   outputparameters.put("MESSAGE","Method Used:scrollUp, Input Given:");
 		 }
@@ -750,8 +752,41 @@ private static String claimId;
 
 	    return outputParameters;
 	}
+   
+ //ValidateDOB
+   public static Hashtable<String, Object> sendDate(Object[] inputparameters) {
 
+	    Hashtable<String, Object> outputparameters = new Hashtable<>();
 
-}		 
+	    try {
+	        String strXpath = (String) inputparameters[0];
+	        String dateValue = (String) inputparameters[1];
+
+	        String finalDate;
+
+	        if ("Today".equalsIgnoreCase(dateValue)) {
+	            finalDate = LocalDate.now()
+	                    .format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+	        } else {
+	            finalDate = dateValue;
+	        }
+
+	        WebElement element = driver.findElement(By.xpath(strXpath));
+	        element.clear();
+	        element.sendKeys(finalDate);
+
+	        outputparameters.put("STATUS", "PASS");
+	        outputparameters.put("MESSAGE",
+	                "Method Used: sendDate, Input Given: " + finalDate);
+
+	    } catch (Exception e) {
+	        outputparameters.put("STATUS", "FAIL");
+	        outputparameters.put("MESSAGE",
+	                "Method Used: sendDate, Error: " + e.getMessage());
+	    }
+
+	    return outputparameters;
+	}
+}	 
 
 	

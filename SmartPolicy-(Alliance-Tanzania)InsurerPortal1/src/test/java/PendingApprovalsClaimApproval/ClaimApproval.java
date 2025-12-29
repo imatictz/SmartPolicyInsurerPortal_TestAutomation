@@ -331,7 +331,7 @@ public class ClaimApproval {
 	 @When("^user click on insert claimant button$")
 	 public void user_click_on_insert_claimant_button() throws Throwable {
 		 
-		 Itl.CustomClickEvent("//*[@id='btnClaimantInsert']", "user click on insert claimant button", "CLICK", 2000);
+		 Itl.CustomClickEvent("//*[@id='btnClaimantInsert']", "user click on insert claimant button", "CLICK", 3000);
 
 	 }
 

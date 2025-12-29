@@ -6,6 +6,7 @@ import java.util.Map;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import itl.Itl;
@@ -42,7 +43,7 @@ public class ManageClaims {
 	 
 	 @When("user enter {string} as cover information")
 		public void user_enter_as_insuranceType(String coverInformation) throws InterruptedException {
-		   Itl.CustomSendEvent("//*[@id='MainContent_txtSrchCoverType']", coverInformation, "user enter {string} as cover information", "TEXTBOX", 0);
+		   Itl.CustomClearSendEvent("//*[@id='MainContent_txtSrchCoverType']", coverInformation, "user enter {string} as cover information", "TEXTBOX", 0);
 		}
 	 @When ("user select {string} as branch")
 	 public void selectBranch(String branch) {
@@ -63,7 +64,7 @@ public class ManageClaims {
 		@When ("user enter claim id to search {string} claim")
 		public void user_enter_as_quote_number(String quoteName) throws InterruptedException {
 			String claimId = SeleniumOperations.getClaimId(quoteName);
-			Itl.CustomSendEvent("//*[@id='MainContent_txtSrchRiskNote']", claimId, "user enter {string} as claim id", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtSrchRiskNote']", claimId, "user enter {string} as claim id", "TEXTBOX", 0);
 			Thread.sleep(4000);
 		}
 
@@ -97,7 +98,7 @@ public class ManageClaims {
 		}
 	 @When("user enter {string} as initial claims reserve")
 	 public void user_enter_as_initial_claims_reserve(String claimReserve) throws InterruptedException {
-			Itl.CustomSendEvent("//*[@id='MainContent_txtInitCR']", claimReserve, "user enter {string} as initial claims reserve", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtInitCR']", claimReserve, "user enter {string} as initial claims reserve", "TEXTBOX", 0);
 
 	 }
 	 @When("user select assign assessor checkbox")
@@ -127,8 +128,8 @@ public class ManageClaims {
 	 }
 	 @When ("user enter claim id")
 	 public void enterClaimId() throws InterruptedException {
-		// String claimId = SeleniumOperations.getStoredClaimId();
-			Itl.CustomSendEvent("//*[@id='MainContent_txtSrchRiskNote']", "401", "user enter risk note number", "TEXTBOX", 2000);
+		    String claimId = SeleniumOperations.getStoredClaimId();
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtSrchRiskNote']", claimId, "user enter risk note number", "TEXTBOX", 2000);
 	 }
 	 @Then ("user able to view {string} as status")
 	 public void status(String status) throws InterruptedException {
@@ -160,11 +161,11 @@ public class ManageClaims {
 			//gender
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbGender')]", "//*[@class='select2-search__field']", userList.get(2).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbGender-result')])", "user select {string} as gender", "DROPDOWN", 2000);
 			//claimant birth date
-			Itl.CustomSendEvent("//*[@id='MainContent_txtCBOD']",userList.get(3).get("Value"), "user enter {string} as claimant birth date", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCBOD']",userList.get(3).get("Value"), "user enter {string} as claimant birth date", "TEXTBOX", 0);
 			//KYC ID Type
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbClaimantIdType')]", "//*[@class='select2-search__field']", userList.get(4).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbClaimantIdType-result')])", "user select {string} as KYC ID Type", "DROPDOWN", 0);
 			//KYC ID number
-			Itl.CustomSendEvent("//*[@id='MainContent_txtCLMDIdNb']",userList.get(5).get("Value"), "user enter {string} as KYC ID number", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCLMDIdNb']",userList.get(5).get("Value"), "user enter {string} as KYC ID number", "TEXTBOX", 0);
 			//reported type
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbIntimationType')]", "//*[@class='select2-search__field']", userList.get(6).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbIntimationType-result')])", "user select {string} as reported type", "DROPDOWN", 0);
 			//claimant loss type
@@ -176,27 +177,40 @@ public class ManageClaims {
 			//District of Claimant
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbDistrictC')]", "//*[@class='select2-search__field']", userList.get(10).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbDistrictC-result')])", "user select {string} as District of Claimant", "DROPDOWN", 0);
 			//claimant name
-			Itl.CustomSendEvent("//*[@id='MainContent_txtClaimantName']",userList.get(11).get("Value"), "user enter {string} as claimant name", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtClaimantName']",userList.get(11).get("Value"), "user enter {string} as claimant name", "TEXTBOX", 0);
 			//Claimant Circumstances
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbInjured')]", "//*[@class='select2-search__field']", userList.get(12).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbInjured-result')])", "user select {string} as Claimant Circumstances", "DROPDOWN", 0);
 			//expected claim amount
-			Itl.CustomSendEvent("//*[@id='txtClaimedAmount']",userList.get(13).get("Value"), "user enter {string} as expected claim amount", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtClaimedAmount']",userList.get(13).get("Value"), "user enter {string} as expected claim amount", "TEXTBOX", 0);
 			//initial reserve amount
-			Itl.CustomSendEvent("//*[@id='txtClaimantAmount']",userList.get(14).get("Value"), "user enter {string} as initial reserve amount", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtClaimantAmount']",userList.get(14).get("Value"), "user enter {string} as initial reserve amount", "TEXTBOX", 0);
 			//Circumstances of the Loss Event
-			Itl.CustomSendEvent("//*[@id='MainContent_txtCircums']",userList.get(15).get("Value"), "user enter {string} as Circumstances of the Loss Event", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCircums']",userList.get(15).get("Value"), "user enter {string} as Circumstances of the Loss Event", "TEXTBOX", 0);
 			//Reported by
-			Itl.CustomSendEvent("//*[@id='MainContent_txtClaimReported']",userList.get(16).get("Value"), "user enter {string} as Reported by", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtClaimReported']",userList.get(16).get("Value"), "user enter {string} as Reported by", "TEXTBOX", 0);
 			//First Loss Payee
-			Itl.CustomSendEvent("//*[@id='txtPayeeBenefeciary']",userList.get(17).get("Value"), "user enter {string} as First Loss Payee", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtPayeeBenefeciary']",userList.get(17).get("Value"), "user enter {string} as First Loss Payee", "TEXTBOX", 0);
 			//Reported Date
-			Itl.CustomSendEvent("//*[@id='MainContent_txtReportedDate']",userList.get(18).get("Value"), "user enter {string} as Reported Date", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtReportedDate']",userList.get(18).get("Value"), "user enter {string} as Reported Date", "TEXTBOX", 0);
 	 
 	 }
 	 @When ("user select reported time")
 	 public void reportTime() throws InterruptedException {
 		    Itl.CustomClickEvent("//*[@id='MainContent_txtReportedTime']", "user select reported time", "CLICK", 2000);
             Itl.ClickEvent("//*[@id='MainContent_txtReportedTime']", "CLICK", 2000);
+	 }
+	 @When("^user click on insert claimant button$")
+	 public void user_click_on_insert_claimant_button() throws Throwable {
+		 Itl.CustomClickEvent("//*[@id='btnClaimantInsert']", "user click on insert claimant button", "CLICK", 3000);
+	 }
+
+	 @And ("^user click on update button$")
+	 public void clickOnUpdateButton() throws InterruptedException {
+		 Object[]input=new Object[1];
+		 input[0]="//*[@id='btnCancel']";
+		 Hashtable<String,Object> output= SeleniumOperations.clickOnElement(input);
+		 HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user click on update button",output.get("MESSAGE").toString());
+		 Thread.sleep(2000);
 	 }
 	 @When ("user click on exit button")
 	 public void exitButton() throws InterruptedException {
@@ -213,7 +227,7 @@ public class ManageClaims {
 	 }
 	 @When("user select file to upload")
 	 public void user_select_file_to_upload() throws InterruptedException {
-			Itl.CustomSendEvent("//*[@id='fileAtchDoc']","C:\\Users\\Administrator\\Documents\\NA.pdf", "user select file to upload", "TEXTBOX", 2000);
+			Itl.CustomClearSendEvent("//*[@id='fileAtchDoc']","C:\\Users\\Administrator\\Documents\\NA.pdf", "user select file to upload", "TEXTBOX", 2000);
 
 	 }
 	 @When("user click on upload button")
@@ -265,11 +279,11 @@ public class ManageClaims {
 			//currency
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbCcy')]", "//*[@class='select2-search__field']", userList.get(4).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbCcy-result')])", "user select {string} as currency", "DROPDOWN", 2000);
 			//Assessment Fee
-			Itl.CustomSendEvent("//*[@id='txtAssessmentAmount']",userList.get(5).get("Value"), "user enter {string} as Assessment Fee", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtAssessmentAmount']",userList.get(5).get("Value"), "user enter {string} as Assessment Fee", "TEXTBOX", 0);
 	 }
 	 @When ("user click on save button to save feedback")
 	 public void savefeedback() throws InterruptedException {
-		    Itl.CustomClickEvent("//*[@id='btnDisSave']", "user click on save button to save feedback", "CLICK", 2000);
+		    Itl.CustomClickEvent("//*[@id='btnDisSave']", "user click on save button to save feedback", "CLICK", 4000);
 	 }
 	 @Then ("user able to view {string} status after feedback saved successfully")
 	 public void feedbackstatus(String status) throws InterruptedException {
@@ -285,21 +299,21 @@ public class ManageClaims {
 			//Service Provider
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbDisAssessor')]", "//*[@class='select2-search__field']", userList.get(1).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbDisAssessor-result')])", "user select {string} as Service Provider", "DROPDOWN", 2000);
 			//Reference Number
-			Itl.CustomSendEvent("//*[@id='MainContent_txtDisReferenceNb']",userList.get(2).get("Value"), "user enter {string} as Reference Number", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtDisReferenceNb']",userList.get(2).get("Value"), "user enter {string} as Reference Number", "TEXTBOX", 0);
 			//Invoice Number
-			Itl.CustomSendEvent("//*[@id='MainContent_txtincNo']",userList.get(3).get("Value"), "user enter {string} as Invoice Number", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtincNo']",userList.get(3).get("Value"), "user enter {string} as Invoice Number", "TEXTBOX", 0);
 			//Service Fee Amount
-			Itl.CustomSendEvent("//*[@id='txtService']",userList.get(4).get("Value"), "user enter {string} as Service Fee Amount", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtService']",userList.get(4).get("Value"), "user enter {string} as Service Fee Amount", "TEXTBOX", 0);
 			//Parts SubTotal
-			Itl.CustomSendEvent("//*[@id='txtPartSubToT']",userList.get(5).get("Value"), "user enter {string} as Parts SubTotal", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtPartSubToT']",userList.get(5).get("Value"), "user enter {string} as Parts SubTotal", "TEXTBOX", 0);
 			//Labor SubTotal
-			Itl.CustomSendEvent("//*[@id='txtLaborSubToT']",userList.get(6).get("Value"), "user enter {string} as Labor SubTotal", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtLaborSubToT']",userList.get(6).get("Value"), "user enter {string} as Labor SubTotal", "TEXTBOX", 0);
 			//Salvage Location
-			Itl.CustomSendEvent("//*[@id='txtSLVGL']",userList.get(7).get("Value"), "user enter {string} as Salvage Location", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtSLVGL']",userList.get(7).get("Value"), "user enter {string} as Salvage Location", "TEXTBOX", 0);
 			//Assessed Salvage Amount
-			Itl.CustomSendEvent("//*[@id='txtSLVGAmount']",userList.get(8).get("Value"), "user enter {string} as Assessed Salvage Amount", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtSLVGAmount']",userList.get(8).get("Value"), "user enter {string} as Assessed Salvage Amount", "TEXTBOX", 0);
 			//Current Market Value
-			Itl.CustomSendEvent("//*[@id='txtCMV']",userList.get(9).get("Value"), "user enter {string} as Current Market Value", "TEXTBOX", 0);
+			Itl.CustomClearSendEvent("//*[@id='txtCMV']",userList.get(9).get("Value"), "user enter {string} as Current Market Value", "TEXTBOX", 0);
 			//Country
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbCNTR')]", "//*[@class='select2-search__field']", userList.get(10).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbCNTR-result')])", "user select {string} as Country", "DROPDOWN", 2000);
 			//Region/City
@@ -307,16 +321,93 @@ public class ManageClaims {
 			//District
 			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbDistrictS')]", "//*[@class='select2-search__field']", userList.get(12).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbDistrictS-result')])", "user select {string} as District", "DROPDOWN", 2000);
 			//Assessment Date
-			Itl.CustomSendEvent("//*[@id='MainContent_txtAssessmentDT']",userList.get(13).get("Value"), "user enter {string} as Assessment Date", "TEXTBOX", 0);
+			Itl.CustomSendTodaysDateEvent("//*[@id='MainContent_txtAssessmentDT']",userList.get(13).get("Value"), "user enter {string} as Assessment Date", "TEXTBOX", 0);
 			//Reference Date
-			Itl.CustomSendEvent("//*[@id='MainContent_txtDisReferenceDate']",userList.get(14).get("Value"), "user enter {string} as Reference Date", "TEXTBOX", 0);
+			Itl.CustomSendTodaysDateEvent("//*[@id='MainContent_txtDisReferenceDate']",userList.get(14).get("Value"), "user enter {string} as Reference Date", "TEXTBOX", 0);
 	 
 	 }
 	 @When("user select repair checkbox as assessor decision")
 	 public void user_select_repair_checkbox_as_assessor_decision() throws InterruptedException {
 		    Itl.CustomClickEvent("//*[@id='chkRepair']", "user select repair checkbox as assessor decision", "CLICK", 2000);
-
 	 }
+	 @When("user click on select icon")
+	 public void user_select_icon() throws InterruptedException {
+		    Itl.CustomClickEvent("//*[@title='Select']", "user click on select icon", "CLICK", 2000);
+	 }
+	 @Given("user click on claim note icon")
+	 public void user_select_claimNote_icon() throws InterruptedException {
+		 SeleniumOperations.scrollUp();		    
+		 Itl.CustomClickEvent("(//*[@title='Claim Note'])[2]", "user click on claim note icon", "CLICK", 2000);
+	 }
+	 @When("user enter claim note details:")
+	 public void user_enter_claim_note_details(DataTable dataTable) throws InterruptedException {
+		 List<Map<String, String>> userList =  (List<Map<String, String>>) dataTable.asMaps(String.class, String.class);
+		    //Payee Type
+			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbPayeeTypeFD')]", "//*[@class='select2-search__field']", userList.get(0).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbPayeeTypeFD-result')])", "user select {string} as Payee Type", "DROPDOWN", 0);
+			//Payee Name
+			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbGarageFD')]", "//*[@class='select2-search__field']", userList.get(1).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbGarageFD-result')])", "user select {string} as Payee Name", "DROPDOWN", 0);
+			//Claim Note Amount
+			Itl.CustomClearSendEvent("//*[@id='txtDVAmount']",userList.get(2).get("Value"), "user enter {string} as Claim Note Amount", "TEXTBOX", 0);
+			//First Excess
+			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbExcessDisp')]", "//*[@class='select2-search__field']", userList.get(3).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbExcessDisp-result')])", "user select {string} as First Excess", "DROPDOWN", 0);
+			//Second Excess
+			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbSecondExcessDisp')]", "//*[@class='select2-search__field']", userList.get(4).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbSecondExcessDisp-result')])", "user select {string} as Second Excess", "DROPDOWN", 0);
+			//Under insurance contribution
+			Itl.CustomClearSendEvent("//*[@id='txtUndInsurancecontributionFD']",userList.get(5).get("Value"), "user enter {string} as Under insurance contribution", "TEXTBOX", 0);
+			//Less Betterment/Depreciation
+			Itl.CustomClearSendEvent("//*[@id='txtSettleLessBettermentFD']",userList.get(6).get("Value"), "user enter {string} as Less Betterment/Depreciation", "TEXTBOX", 0);
+			//First Excess Percent
+			Itl.CustomClearSendEvent("//*[@id='txtExcessPercentDisp']",userList.get(7).get("Value"), "user enter {string} as First Excess Percent", "TEXTBOX", 0);
+			//Second Excess Percent
+			Itl.CustomClearSendEvent("//*[@id='txtSecondExcessPercentDisp']",userList.get(8).get("Value"), "user enter {string} as Second Excess Percent", "TEXTBOX", 0);
+			//Young / Inexperience Driver
+			Itl.CustomClearSendEvent("//*[@id='txtSettleYoungInexpFD']",userList.get(9).get("Value"), "user enter {string} as Young / Inexperience Driver", "TEXTBOX", 0);
+			//Other Deduction
+			Itl.CustomClearSendEvent("//*[@id='txtOtherDeduction']",userList.get(10).get("Value"), "user enter {string} as Other Deduction", "TEXTBOX", 0);
+			//Recomendation
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtRecomendation']",userList.get(11).get("Value"), "user enter {string} as Recomendation", "TEXTBOX", 0);
+	 }
+	 @When("user select Amount Includes WH Amount checkbox")
+	 public void user_select_amount_includes_wh_amount_checkbox() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='chkIsWithholdTaxFD']", "user select Amount Includes WH Amount checkbox", "CLICK", 2000);
+	 }
+	 @When("user select Add VAT checkbox")
+	 public void user_select_add_vat_checkbox() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='chkIsTaxFD']", "user select Add VAT checkbox", "CLICK", 2000);
+	 }
+	 @When("user select Amount Includes VAT checkbox")
+	 public void user_select_amount_includes_vat_checkbox() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='chkIncludeTaxFD']", "user select Amount Includes VAT checkbox", "CLICK", 2000);
+	 }
+	 @When("user click on save button to save claim note details")
+	 public void user_click_on_save_button() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='btnReserveSaveFD']", "user click on save button to save claim note details", "CLICK", 2000);
+	 }
+	 @Then ("user able to view {string} status after claim note details saved successfully")
+	 public void claimNotestatus(String status) throws InterruptedException {
+			Itl.CustomValidationEvent("//*[text()='1001-New information recorded successfully']", status, "user able to view {string} status after claim note details saved successfully", "VALIDATION", 4000);
+	 }
+	 
 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 
 }
