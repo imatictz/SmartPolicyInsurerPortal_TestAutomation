@@ -16,7 +16,7 @@ When user enter risk note number to search "Individual Personal Accident" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveBondsQuote  @ApproveQuote
 Scenario: (Endorsement Approval-Bonds Quotation)Verify user able to approve non compliance approval successfully
@@ -27,7 +27,7 @@ When user enter risk note number to search "Bonds" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveBurglaryQuote  @ApproveQuote
 Scenario: (Endorsement Approval-Burglary/Theft Quotation)Verify user able to approve non compliance approval successfully
@@ -38,7 +38,7 @@ When user enter risk note number to search "Burglary/Theft" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveCreditLifeQuote    @ApproveQuote
 Scenario: (Endorsement Approval-Credit Life Insurance Quotation)Verify user able to approve non compliance approval successfully
@@ -49,7 +49,7 @@ When user enter risk note number to search "Credit Life Insurance" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveFidelityQuote    @ApproveQuote
 Scenario: (Endorsement Approval-Fidelity Quotation)Verify user able to approve non compliance approval successfully
@@ -60,7 +60,7 @@ When user enter risk note number to search "Fidelity" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveFireBurglaryQuote    @ApproveQuote
 Scenario: (Endorsement Approval-Fire and Burglary Quotation)Verify user able to approve non compliance approval successfully
@@ -71,7 +71,7 @@ When user enter risk note number to search "Fire and Burglary" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveFireClassQuote    @ApproveQuote
 Scenario: (Endorsement Approval-Fire Class Quotation)Verify user able to approve non compliance approval successfully
@@ -82,7 +82,7 @@ When user enter risk note number to search "Fire Class" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveGroupLifeQuote    @ApproveQuote
 Scenario: (Endorsement Approval-Group Life Quotation)Verify user able to approve non compliance approval successfully
@@ -93,7 +93,7 @@ When user enter risk note number to search "Group Life" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveMedicalQuote     @ApproveQuote
 Scenario: (Endorsement Approval-Medical Quotation)Verify user able to approve non compliance approval successfully
@@ -104,7 +104,7 @@ When user enter risk note number to search "Medical" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApprovePensionQuote     @ApproveQuote
 Scenario: (Endorsement Approval-Pension Quotation)Verify user able to approve non compliance approval successfully
@@ -115,7 +115,7 @@ When user enter risk note number to search "Pension" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message
 
 @ApproveMotorQuote     @ApproveQuote
 Scenario: (Endorsement Approval-Motor Quotation)Verify user able to approve non compliance approval successfully
@@ -126,4 +126,4 @@ When user enter risk note number to search "Motor" quote
 When user click on search button
 When user click on display option
 And user click on approve endorsement button
-Then user navigate on Endorsement Approval screen
+Then user able to view "1007-Information approved successfully" as message

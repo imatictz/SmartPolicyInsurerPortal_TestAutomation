@@ -30,7 +30,12 @@ public class BankAccountGLMapping {
 	}
 	@When("user select {string} as type")
 	public void user_select_as_type(String type) {
-	    Itl.CustomDropdownEvent("//*[contains(@aria-controls,'cmbType')]", "//*[@class='select2-search__field']", type, "//*[contains(@data-select2-id,'select2-MainContent_cmbType')]", "user select {string} as type", "DROPDOWN", 0);
+	    Itl.CustomDropdownEvent("//*[contains(@aria-controls,'cmbType')]",
+	    		"//*[@class='select2-search__field']",
+	    		type, 
+	    		"//*[contains(@data-select2-id,'select2-MainContent_cmbType')]",
+	    		"user select {string} as type",
+	    		"DROPDOWN", 0);
 	}
 	@Then("user select {string} as intermediary type")
 	public void user_select_as_intermediary_type(String intermediaryType) {
@@ -39,7 +44,7 @@ public class BankAccountGLMapping {
 	}
 	@When("user enter {string} as payment mode")
 	public void user_enter_as_payment_mode(String paymentMode) throws InterruptedException {
-	    Itl.CustomSendEvent("//*[@id='txtPayMode']", paymentMode, "user enter {string} as payment mode", "TEXTBOX", 0);
+	    Itl.CustomClearSendEvent("//*[@id='txtPayMode']", paymentMode, "user enter {string} as payment mode", "TEXTBOX", 0);
 	}
 	@Then("user select {string} as mapped payment mode")
 	public void user_select_as_mapped_payment_mode(String mappedMode) {

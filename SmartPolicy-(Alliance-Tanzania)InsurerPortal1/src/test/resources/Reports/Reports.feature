@@ -583,8 +583,151 @@ And user select "01/01/2025" as from date
 And user click on show report button
 Then user able to view "Reinsurer Premium Register" report in pdf format
 
+@270    @OthersReports
+Scenario: Verify user able to view Exception Report(RPTINS270)report successfully
+When user select "Other Reports" as report category
+When user search "Exception Report" as report name in search box
+Then user click to select Exception Report as report
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Exception Report" report in pdf format
+
+@297  @OthersReports
+Scenario: Verify user able to view Indirect Premiums Receipt(RPTINS297)report successfully
+When user select "Other Reports" as report category
+When user search "Indirect Premiums Receipt" as report name in search box
+Then user click to select Indirect Premiums Receipt as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Tanzanian Shillings" as currency
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Indirect Premiums Receipt" report in pdf format
+
+@12    @OthersReports
+Scenario: Verify user able to view Sticker Utilization Report(RPTINS12)report successfully
+When user select "Other Reports" as report category
+When user search "Sticker Utilization Report" as report name in search box
+Then user click to select Sticker Utilization Report as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Sticker Utilization Report" report in pdf format
+
+@76    @OthersReports
+Scenario: Verify user able to view Travel Cession/Bordeaux Report(RPTINS76)report successfully
+When user select "Other Reports" as report category
+When user search "Travel Cession/Bordeaux Report" as report name in search box
+Then user click to select Travel Cession/Bordeaux Report as report
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Travel Cession/Bordeaux Report" report in pdf format
+
+@82    @OthersReports
+Scenario: Verify user able to view Travel Cession/Bordeaux Report (MAPFRE)(RPTINS82)report successfully
+When user select "Other Reports" as report category
+When user search "Travel Cession/Bordeaux Report (MAPFRE)" as report name in search box
+Then user click to select Travel Cession/Bordeaux Report (MAPFRE) as report
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Travel Cession/Bordeaux Report (MAPFRE)" report in pdf format
+
+@91    @OthersReports
+Scenario: Verify user able to view Unearned Premium Reserve(RPTINS91)report successfully
+When user select "Other Reports" as report category
+When user search "Unearned Premium Reserve" as report name in search box
+Then user click to select Unearned Premium Reserve as report
+And user click on show report button
+Then user able to view "Unearned Premium Reserve" report in pdf format
+
+@92    @OthersReports
+Scenario: Verify user able to view Unearned Premium Reserve for ceded premium(RPTINS92)report successfully
+When user select "Other Reports" as report category
+When user search "Unearned Premium Reserve for ceded premium" as report name in search box
+Then user click to select Unearned Premium Reserve for ceded premium as report
+And user click on show report button
+Then user able to view "Unearned Premium Reserve for ceded premium" report in pdf format
+
+@121    @OthersReports
+Scenario: Verify user able to view User Details(RPTINS121)report successfully
+When user select "Other Reports" as report category
+When user search "User Details" as report name in search box
+Then user click to select User Details as report
+And user click on show report button
+Then user able to view "User Details" report in pdf format
+
+@124    @OthersReports
+Scenario: Verify user able to view Z_REPORT(RPTINS124)report successfully
+When user select "Other Reports" as report category
+When user search "Z_REPORT" as report name in search box
+Then user click to select Z_REPORT as report
+And user click on show report button
+Then user able to view "Z_REPORT" report in pdf format
 
 
+@110    @PremiumCollectionReports
+Scenario: Verify user able to view Daily Debit Notes/ Tax Invoices (Outstanding wise)(RPTINS110)report successfully
+When user select "Premium Collection Reports" as report category
+When user search "Daily Debit Notes/ Tax Invoices (Outstanding wise)" as report name in search box
+Then user click to select Daily Debit Notes/ Tax Invoices (Outstanding wise) as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Daily Debit Notes/ Tax Invoices (Outstanding wise)" report in pdf format
+
+@152    @PremiumCollectionReports
+Scenario: Verify user able to view Debtors Age Analysis report(RPTINS152)report successfully
+When user select "Premium Collection Reports" as report category
+When user search "Debtors Age Analysis report" as report name in search box
+Then user click to select Debtors Age Analysis report as report
+When user select "All" as business by
+When user select "Tanzanian Shillings" as currency
+And user click on show report button
+Then user able to view "Debtors Age Analysis report" report in pdf format
+
+@18    @PremiumCollectionReports
+Scenario: Verify user able to view Digital Premium Collection Report (Payment Mode Wise)(RPTINS18)report successfully
+When user select "Premium Collection Reports" as report category
+When user search "Digital Premium Collection Report (Payment Mode Wise)" as report name in search box
+Then user click to select Digital Premium Collection Report (Payment Mode Wise) as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Digital Premium Collection Report (Payment Mode Wise)" report in pdf format
+
+@300    @PremiumCollectionReports
+Scenario: Verify user able to view Mobile Money Transaction(RPTINS300)report successfully
+When user select "Premium Collection Reports" as report category
+When user search "Mobile Money Transaction" as report name in search box
+Then user click to select Mobile Money Transaction as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Mobile Money Transaction" report in pdf format
+
+@43    @PremiumCollectionReports
+Scenario: Verify user able to view Mobile Money Transactions (Branch Wise)(RPTINS43)report successfully
+When user select "Premium Collection Reports" as report category
+When user search "Mobile Money Transactions (Branch Wise)" as report name in search box
+Then user click to select Mobile Money Transactions (Branch Wise) as report
+When user select "TestProject" as select company
+When user select "All" as select branch
+When user select "Transaction Date" as date criteria
+And user select "01/01/2025" as from date
+And user click on show report button
+Then user able to view "Mobile Money Transactions (Branch Wise)" report in pdf format
 
 
 

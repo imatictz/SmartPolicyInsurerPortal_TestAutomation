@@ -48,7 +48,7 @@ public class ManageBids {
  	   Object[] input = new Object[2];
  	   input[0]="//*[@id='MainContent_txtBidEndDate']";
  	   input[1]=bidEndDate;
- 	   Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+ 	   Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
  	   HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as bid end date",output.get("MESSAGE").toString());
  	}
 
@@ -57,7 +57,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
   	    input[0]="//*[@id='txtVehicleNo']";
   	    input[1]=vehicleNo;
-  	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+  	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
   	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" vehicle No",output.get("MESSAGE").toString());
   	}
 
@@ -75,7 +75,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
    	    input[0]="//*[@id='txtMakeNew']";
    	    input[1]=makeModel;
-   	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+   	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
    	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as make&Model",output.get("MESSAGE").toString());
    	}
 
@@ -84,9 +84,10 @@ public class ManageBids {
  	    Object[] input = new Object[2];
     	input[0]="//*[@id='txtTypeNew']";
     	input[1]=vehicleType;
-    	Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+    	Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
     	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as vehicle type",output.get("MESSAGE").toString());
-    }
+    	Thread.sleep(2000);
+ 	}
 
  	@Then("^user click on save button \\(VehicleMake\\)$")
  	public void user_click_on_save_button() throws Throwable {
@@ -102,7 +103,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
  	    input[0]="//*[@id='MainContent_txtFltMake']";
  	    input[1]=vehicleMake;
- 	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+ 	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
  	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as vehicle make",output.get("MESSAGE").toString());
  	}
 
@@ -111,7 +112,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
   	    input[0]="//*[@id='txtType']";
   	    input[1]=type;
-  	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+  	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
   	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as type",output.get("MESSAGE").toString());
   	}
 
@@ -120,7 +121,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
    	    input[0]="//*[@id='txtChasis']";
    	    input[1]=chasisNo;
-   	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+   	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
    	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as chasis No",output.get("MESSAGE").toString());
    	}
 
@@ -129,7 +130,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
     	input[0]="//*[@id='txtSalvageValue']";
     	input[1]=salvageValue;
-    	Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+    	Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
     	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as salvage value",output.get("MESSAGE").toString());
     }
 
@@ -138,27 +139,24 @@ public class ManageBids {
  	    Object[] input = new Object[2];
  	    input[0]="//*[@id='txtMinValue']";
  	    input[1]=minBidValue;
- 	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+ 	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
  	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as min bid value",output.get("MESSAGE").toString());
  	}
 
- 	@Then("^user select \"([^\"]*)\" as currency from dropdown$")
- 	public void user_select_as_currency_from_dropdown(String currency) throws Throwable {
- 	    Object[] input = new Object[4];
- 		input[0]="//*[@id='s2id_MainContent_cmbCurrency']";
- 		input[1]="//*[@class='select2-input select2-focused']";
- 		input[2]=currency;
- 		input[3]="//*[@class='select2-match']";
- 		Hashtable<String,Object>output=SeleniumOperations.dropdown(input);
- 	 	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as min bid value",output.get("MESSAGE").toString());
- 	}
+ 	@When ("user select {string} as currency from dropdown")
+	 public void selectBranch(String branch) {
+		 Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbCurrency')]",
+				 "(//*[@class='select2-search__field'])[2]", 
+				 branch, "(//*[contains(@id,'MainContent_cmbCurrency-results')])[1]",
+				 "user select {string} as currency from dropdown", "DROPDOWN", 1000);
+	 }
 
  	@When("^user enter \"([^\"]*)\" as address$")
  	public void user_enter_as_address(String address) throws Throwable {
  	    Object[] input = new Object[2];
   	    input[0]="//*[@id='MainContent_txtLocation']";
   	    input[1]=address;
-  	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+  	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
   	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as address",output.get("MESSAGE").toString());
   	}
 
@@ -167,7 +165,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
    	    input[0]="//*[@id='txtContactPerson']";
    	    input[1]=contactPerson;
-   	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+   	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
    	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as contact person",output.get("MESSAGE").toString());
    	}
 
@@ -176,7 +174,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
     	input[0]="//*[@id='txtMobile']";
     	input[1]=mobile;
-    	Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+    	Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
     	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as mobile",output.get("MESSAGE").toString());
     }
 
@@ -185,7 +183,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
  	    input[0]="//*[@id='txtPreferredTime']";
  	    input[1]=time;
- 	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+ 	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
  	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as Preferred time to contact",output.get("MESSAGE").toString());
  	}
 
@@ -194,7 +192,7 @@ public class ManageBids {
  	    Object[] input = new Object[2];
   	    input[0]="//*[@id='txtInsContactPerson']";
   	    input[1]=contactPerson;
-  	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+  	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
   	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as contact person \\\\(Insurance Company\\\\)",output.get("MESSAGE").toString());
   	}
 
@@ -203,21 +201,25 @@ public class ManageBids {
  	    Object[] input = new Object[2];
    	    input[0]="//*[@id='txtInsMobile']";
    	    input[1]=mobile;
-   	    Hashtable<String,Object>output=SeleniumOperations.sendKeys(input);
+   	    Hashtable<String,Object>output=SeleniumOperations.clearAndEnter(input);
    	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user enter \\\"([^\\\"]*)\\\" as mobile \\\\(Insurance Company\\\\)",output.get("MESSAGE").toString());
    	}
 
- 	@When("^user select \"([^\"]*)\" as bid type from dropdown$")
- 	public void user_select_as_bid_type_from_dropdown(String bidType) throws Throwable {
- 	    Object[] input = new Object[4];
- 		input[0]="//*[@id='s2id_MainContent_cmbBidType']";
- 		input[1]="//*[@class='select2-input select2-focused']";
- 		input[2]=bidType;
- 		input[3]="//*[@class='select2-match']";
- 		Hashtable<String,Object>output=SeleniumOperations.dropdown(input);
- 	 	HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user select \\\"([^\\\"]*)\\\" as bid type from dropdown",output.get("MESSAGE").toString());
- 	}
+ 	@When ("user select {string} as bid type from dropdown")
+	 public void selectbidType(String bidType) {
+		 Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbBidType')]",
+				 "(//*[@class='select2-search__field'])[2]", 
+				 bidType, "(//*[contains(@id,'MainContent_cmbBidType-results')])[1]", "user select {string} as branch", "DROPDOWN", 1000);
+	 }
 
+ 	@When("user able to view {string} as message")
+	public void user_able_to_view_as_message(String status) throws InterruptedException {
+		Itl.CustomValidationEvent("//*[@class='messenger-message-inner']", 
+				status,
+				"user able to view {string} as message", 
+				"VALIDATION", 
+				0);
+	}
  	@When("^user select \"([^\"]*)\" as bidders$")
  	public void user_select_as_bidders(String bidders) throws Throwable {
  	    Object[] input = new Object[4];
@@ -239,6 +241,33 @@ public class ManageBids {
  	    Thread.sleep(2000);
  	}
  	
+ 	@Then ("^user click on update button$")
+ 	public void update() throws InterruptedException{
+ 		Object[] input7=new Object[1];
+ 		input7[0]="//*[@id='btnSave']";
+ 	    Hashtable<String,Object>output=SeleniumOperations.clickOnElement(input7);
+ 	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user click on update button",output.get("MESSAGE").toString());
+ 	    Thread.sleep(2000);
+ 	}
+ 	
+ 	@Then ("^user click on delete button$")
+ 	public void delete() throws InterruptedException{
+ 		Object[] input7=new Object[1];
+ 		input7[0]="//*[@id='btnSave']";
+ 	    Hashtable<String,Object>output=SeleniumOperations.clickOnElement(input7);
+ 	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user click on delete button",output.get("MESSAGE").toString());
+ 	    Thread.sleep(2000);
+ 	}
+ 	
+ 	@Then ("^user click on approve button$")
+ 	public void approve() throws InterruptedException{
+ 		Object[] input7=new Object[1];
+ 		input7[0]="//*[@id='btnSave']";
+ 	    Hashtable<String,Object>output=SeleniumOperations.clickOnElement(input7);
+ 	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), "user click on approve button",output.get("MESSAGE").toString());
+ 	    Thread.sleep(2000);
+ 	}
+ 	
  	@Then("^user able to view \"([^\"]*)\" as status$")
 	public void user_able_to_view_as_status(String status) throws Throwable {
 	    Object[] input=new Object[2];
@@ -247,4 +276,40 @@ public class ManageBids {
 		Hashtable<String,Object> output= SeleniumOperations.validation(input);
 	    HTMLReportGenerator.StepDetails(output.get("STATUS").toString(),"user able to view \\\"([^\\\"]*)\\\" as status",output.get("MESSAGE").toString());
     }
+ 	@Then("user click on search button")
+	public void user_click_on_search_button() throws InterruptedException {
+	    Itl.CustomClickEvent("//*[@id='MainContent_btnSearch']", 
+	    		"user click on search button", "CLICK", 2000);
+	}
+ 	@When("user click on actions option")
+	public void user_click_on_actions_option() throws InterruptedException {
+		Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[10]/*[2]", 
+				"user click on actions option", "CLICK", 2000);
+	}
+	@When("user click on edit option")
+	public void user_click_on_edit_option() throws InterruptedException {
+		Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[10]/*[2]/*[2]/*[1]", 
+				"user click on edit option", "CLICK", 2000);
+	}
+	@When("user click on delete option")
+	public void user_click_on_delete_option() throws InterruptedException {
+		Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[10]/*[2]/*[2]/*[2]", 
+				"user click on delete option", "CLICK", 2000);
+	}
+	@When("user click on approve option")
+	public void user_click_on_approve_option() throws InterruptedException {
+		Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[10]/*[2]/*[2]/*[3]", 
+				"user click on approve option", "CLICK", 2000);
+	}
+	@When("user enter {string} as vehicle number")
+	public void user_enter_as_vehicle_number(String vehicleNumber) throws InterruptedException {
+		Itl.CustomClearSendEvent("//*[@id='MainContent_txtSrchVehNumber']", 
+				vehicleNumber, "user enter {string} as vehicle number", "TEXTBOX", 0);
+
+	}
+	@When("user enter {string} as vehicle name")
+	public void user_enter_as_vehicle_name(String vehicleName) throws InterruptedException {
+		Itl.CustomClearSendEvent("//*[@id='MainContent_txtSrchVehName']", 
+				vehicleName, "user enter {string} as vehicle name", "TEXTBOX", 0);
+	}
 }

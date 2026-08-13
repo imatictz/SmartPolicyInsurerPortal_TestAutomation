@@ -1,43 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="11" passed="11" failed="0" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-29T06:47:07Z" name="Default suite" finished-at="2025-12-29T08:02:32Z" duration-ms="4524910">
+  <suite started-at="2026-08-11T11:50:47Z" name="Default suite" finished-at="2026-08-11T11:53:59Z" duration-ms="192224">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4e8e8621]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-12-29T06:47:07Z" name="Default test" finished-at="2025-12-29T08:02:32Z" duration-ms="4524910">
+    <test started-at="2026-08-11T11:50:47Z" name="Default test" finished-at="2026-08-11T11:53:59Z" duration-ms="192224">
       <class name="testRunner.RunnerTestManageClaims">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T09:47:07Z" name="setUpClass" finished-at="2025-12-29T09:47:08Z" duration-ms="592" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestManageClaims@4e8e8621]" started-at="2026-08-11T14:50:47Z" name="setUpClass" finished-at="2026-08-11T14:50:48Z" duration-ms="1061" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2a10a1e2]]>
+                <![CDATA[org.testng.TestRunner@5a6fa56e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T09:47:08Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T09:52:19Z" duration-ms="311371" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Accidental Damage Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T09:52:19Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T09:57:09Z" duration-ms="289268" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4e8e8621]" started-at="2026-08-11T14:50:48Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-08-11T14:53:59Z" duration-ms="190787" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,151 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T09:57:09Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:01:59Z" duration-ms="290454" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Burglary Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:01:59Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:06:49Z" duration-ms="290297" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Credit Life Insurance Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:06:49Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:21:36Z" duration-ms="886811" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Fidelity Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:21:36Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:27:27Z" duration-ms="350577" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Fire and Burglary Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:27:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:32:18Z" duration-ms="291079" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Fire Class Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:32:18Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:38:07Z" duration-ms="349472" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Group Life Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:38:07Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:43:57Z" duration-ms="349773" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Medical Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:43:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T10:48:47Z" duration-ms="290366" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Pension Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T10:48:48Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-29T11:02:32Z" duration-ms="824756" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["(Manage Motor Claim)Verify user able to manage claims successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Manage claims"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestManageClaims@4f5991f6]" started-at="2025-12-29T11:02:32Z" name="tearDownClass" finished-at="2025-12-29T11:02:32Z" duration-ms="22" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestManageClaims@4e8e8621]" started-at="2026-08-11T14:53:59Z" name="tearDownClass" finished-at="2026-08-11T14:53:59Z" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

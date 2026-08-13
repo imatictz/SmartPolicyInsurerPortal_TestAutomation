@@ -103,6 +103,19 @@ public class Itl {
 			}
 	}
 	
+	public static void CustomValidationContainsEvent(String strElementId,String strInputText,String stepName,
+			String strElementType, int intThreadSleepTime ) throws InterruptedException {
+			/*strElementType can be as follows: Textbooks, Dropdown, RadioButton, CheckBox*/
+			if (strElementType == "VALIDATION") {
+				Object[] input = new Object[2];
+				input[0]=strElementId;
+				input[1]=strInputText;
+				Hashtable<String, Object> output = SeleniumOperations.validationContains(input);
+				HTMLReportGenerator.StepDetails(output.get("STATUS").toString(), stepName, output.get("MESSAGE").toString());
+				Thread.sleep(intThreadSleepTime);	
+			}
+	}
+	
 	/*public static void CustomswitchWindowEvent(String stepName ,String strElementType) {
 		if(strElementType =="SWITCHWINDOW")
 		try{

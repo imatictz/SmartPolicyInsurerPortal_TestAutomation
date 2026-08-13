@@ -1,11 +1,13 @@
 package testRunner;
 
+import org.testng.annotations.DataProvider;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(  
 		           features="src/test/resources/SalvageBidding/ManageBids.feature", 
-                   tags= "@AllFields", 
+                   tags= "@All", 
                    glue={"SalvageBidding","MyHooks"}, 
                    monochrome=true, 
                    plugin= "pretty",   
@@ -14,5 +16,9 @@ import io.cucumber.testng.CucumberOptions;
 
 public class RunnerTestManageBids extends AbstractTestNGCucumberTests
 {     
-	
+	@DataProvider(parallel = false)
+	public Object[][] scenarios() {
+	    System.setProperty("dataproviderthreadcount", "2");
+	    return super.scenarios();
+	}
 }

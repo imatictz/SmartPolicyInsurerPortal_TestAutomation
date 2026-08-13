@@ -19,17 +19,22 @@ public class ManageClaims {
 	 
 	 @When("user navigate on operation dropdown menu")
 		public void user_navigate_on_operation_dropdown_menu() throws Throwable {
-		    Itl.CustomNavigateAction("//*[@id='span_Security_lc']", "user navigate on operation dropdown menu", "NAVIGATE", 2000);
+		    Itl.CustomNavigateAction("//*[@id='span_Security_lc']", 
+		    		"user navigate on operation dropdown menu",
+		    		"NAVIGATE", 3000);
 		}
 	 
 	 @When("user navigate on approval management option")
 		public void user_navigate_on_approval_management_option() throws Throwable {
-		    Itl.CustomNavigateAction("//*[@id='MNU_APPROVAL']", "user navigate on approval management option", "NAVIGATE", 2000);
+		    Itl.CustomNavigateAction("//*[@id='MNU_APPROVAL']",
+		    		"user navigate on approval management option", 
+		    		"NAVIGATE", 3000);
 		}
 
 	 @Then("user click on claim approval option")
 	 public void user_click_on_claims_option() throws Throwable {
-		    Itl.CustomClickEvent("//*[@id='span_claimApprv_lc']", "user click on claim approval option", "CLICK", 2000);
+		    Itl.CustomClickEvent("//*[@id='span_claimApprv_lc']", 
+		    		"user click on claim approval option", "CLICK", 2000);
 	   }
 	 @When("user navigate on claims management option")
 		public void user_navigate_on_claims_management_option() throws Throwable {
@@ -47,7 +52,11 @@ public class ManageClaims {
 		}
 	 @When ("user select {string} as branch")
 	 public void selectBranch(String branch) {
-		 Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbBranch')]", "//*[@class='select2-search__field']", branch, "(//*[contains(@id,'MainContent_cmbBranch-results')])[1]", "user select {string} as branch", "DROPDOWN", 1000);
+		 Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbBranch')]",
+				 "//*[@class='select2-search__field']", 
+				 branch, 
+				 "(//*[contains(@id,'MainContent_cmbBranch-results')])[1]", 
+				 "user select {string} as branch", "DROPDOWN", 1000);
 	 }
 
 		@When ("user click on search button to find {string} claim")
@@ -123,7 +132,8 @@ public class ManageClaims {
 	 }
 	 @Then ("user able to view {string} as success message")
 	 public void successMessage(String message) throws InterruptedException {
-			Itl.CustomValidationEvent("//*[@class='messenger-message-inner']", message, "user able to view {string} as success message", "VALIDATION", 0);
+			Itl.CustomValidationEvent("//*[@class='messenger-message-inner']", message, 
+					"user able to view {string} as success message", "VALIDATION", 0);
 
 	 }
 	 @When ("user enter claim id")
@@ -142,67 +152,251 @@ public class ManageClaims {
 
 	 @When ("user click on edit claim icon")
 	 public void editClaimIcon() throws InterruptedException {
-		    Itl.CustomClickEvent("//*[@class='DisplayData grid_btnSpace']", "user click on edit claim icon", "CLICK", 5000);
+		    Itl.CustomClickEvent("//*[@id='li5']", "user click on edit claim icon", "CLICK", 5000);
 	 }
 	 
 	 @When ("^user select \"(.*)\" as claimant category$")
 	 public void user_click_on_claimant_category_dropdown(String claimantCategory) throws Throwable {
-	       Itl.CustomDropdownEvent("//*[@id='s2id_MainContent_cmbClaimantType']", "//*[@class='select2-input select2-focused']", claimantCategory, "//*[@class='select2-match']", "user select \\\\\\\"(.*)\\\\\\\" as claimant category", "DROPDOWN", 2000);
+	       Itl.CustomDropdownEvent("//*[@id='s2id_MainContent_cmbClaimantType']",
+	    		   "//*[@class='select2-input select2-focused']", 
+	    		   claimantCategory, 
+	    		   "//*[@class='select2-match']", 
+	    		   "user select \\\\\\\"(.*)\\\\\\\" as claimant category",
+	    		   "DROPDOWN",
+	    		   2000);
 	 }
 	 @When("user enter claimant details :")
 	 public void user_enter_claimant_details(DataTable dataTable) throws InterruptedException {
-		 List<Map<String, String>> userList =  (List<Map<String, String>>) dataTable.asMaps(String.class, String.class);
-	 	   
-	        //claimant category
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbClaimantType')]", "//*[@class='select2-search__field']", userList.get(0).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbClaimantType-result')])", "user select {string} as claimant category", "DROPDOWN", 0);
-			Thread.sleep(4000);
-			//claimant status
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbCLMDType')]", "//*[@class='select2-search__field']", userList.get(1).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbCLMDType-result')])", "user select {string} as claimant status", "DROPDOWN", 3000);
-			//gender
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbGender')]", "//*[@class='select2-search__field']", userList.get(2).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbGender-result')])", "user select {string} as gender", "DROPDOWN", 2000);
-			//claimant birth date
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCBOD']",userList.get(3).get("Value"), "user enter {string} as claimant birth date", "TEXTBOX", 0);
-			//KYC ID Type
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbClaimantIdType')]", "//*[@class='select2-search__field']", userList.get(4).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbClaimantIdType-result')])", "user select {string} as KYC ID Type", "DROPDOWN", 0);
-			//KYC ID number
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCLMDIdNb']",userList.get(5).get("Value"), "user enter {string} as KYC ID number", "TEXTBOX", 0);
-			//reported type
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbIntimationType')]", "//*[@class='select2-search__field']", userList.get(6).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbIntimationType-result')])", "user select {string} as reported type", "DROPDOWN", 0);
-			//claimant loss type
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbLossType')]", "//*[@class='select2-search__field']", userList.get(7).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbLossType-result')])", "user select {string} as claimant loss type", "DROPDOWN", 0);
-			//Country of Claimant
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbCountryCode')]", "//*[@class='select2-search__field']", userList.get(8).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbCountryCode-result')])", "user select {string} as Country of Claimant", "DROPDOWN", 0);
-			//Region/City of Claimant
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbRegionC')]", "//*[@class='select2-search__field']", userList.get(9).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbRegionC-result')])", "user select {string} as Region/City of Claimant", "DROPDOWN", 0);
-			//District of Claimant
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbDistrictC')]", "//*[@class='select2-search__field']", userList.get(10).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbDistrictC-result')])", "user select {string} as District of Claimant", "DROPDOWN", 0);
-			//claimant name
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtClaimantName']",userList.get(11).get("Value"), "user enter {string} as claimant name", "TEXTBOX", 0);
-			//Claimant Circumstances
-			Itl.CustomDropdownEvent("//*[contains(@aria-controls,'MainContent_cmbInjured')]", "//*[@class='select2-search__field']", userList.get(12).get("Value"), "(//*[contains(@data-select2-id,'MainContent_cmbInjured-result')])", "user select {string} as Claimant Circumstances", "DROPDOWN", 0);
-			//expected claim amount
-			Itl.CustomClearSendEvent("//*[@id='txtClaimedAmount']",userList.get(13).get("Value"), "user enter {string} as expected claim amount", "TEXTBOX", 0);
-			//initial reserve amount
-			Itl.CustomClearSendEvent("//*[@id='txtClaimantAmount']",userList.get(14).get("Value"), "user enter {string} as initial reserve amount", "TEXTBOX", 0);
-			//Circumstances of the Loss Event
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtCircums']",userList.get(15).get("Value"), "user enter {string} as Circumstances of the Loss Event", "TEXTBOX", 0);
-			//Reported by
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtClaimReported']",userList.get(16).get("Value"), "user enter {string} as Reported by", "TEXTBOX", 0);
-			//First Loss Payee
-			Itl.CustomClearSendEvent("//*[@id='txtPayeeBenefeciary']",userList.get(17).get("Value"), "user enter {string} as First Loss Payee", "TEXTBOX", 0);
-			//Reported Date
-			Itl.CustomClearSendEvent("//*[@id='MainContent_txtReportedDate']",userList.get(18).get("Value"), "user enter {string} as Reported Date", "TEXTBOX", 0);
-	 
+
+	     Map<String, String> data = dataTable.asMap(String.class, String.class);
+
+	     if (data.get("Claimant Category") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbClaimantType')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Claimant Category"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbClaimantType-result')])",
+	                 "user select {string} as claimant category",
+	                 "DROPDOWN",
+	                 0
+	         );
+	         Thread.sleep(4000);
+	     }
+
+	     if (data.get("Claimant Status") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbCLMDType')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Claimant Status"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbCLMDType-result')])",
+	                 "user select {string} as claimant status",
+	                 "DROPDOWN",
+	                 3000
+	         );
+	     }
+
+	     if (data.get("Gender") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbGender')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Gender"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbGender-result')])",
+	                 "user select {string} as gender",
+	                 "DROPDOWN",
+	                 2000
+	         );
+	     }
+
+	     if (data.get("Claimant Birth Date") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtCBOD']",
+	                 data.get("Claimant Birth Date"),
+	                 "user enter {string} as claimant birth date",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("KYC ID Type") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbClaimantIdType')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("KYC ID Type"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbClaimantIdType-result')])",
+	                 "user select {string} as KYC ID Type",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("KYC ID Number") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtCLMDIdNb']",
+	                 data.get("KYC ID Number"),
+	                 "user enter {string} as KYC ID number",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Reported Type") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbIntimationType')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Reported Type"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbIntimationType-result')])",
+	                 "user select {string} as reported type",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Claimant Loss Type") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbLossType')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Claimant Loss Type"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbLossType-result')])",
+	                 "user select {string} as claimant loss type",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Country of Claimant") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbCountryCode')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Country of Claimant"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbCountryCode-result')])",
+	                 "user select {string} as Country of Claimant",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Region/City of Claimant") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbRegionC')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Region/City of Claimant"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbRegionC-result')])",
+	                 "user select {string} as Region/City of Claimant",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("District of Claimant") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbDistrictC')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("District of Claimant"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbDistrictC-result')])",
+	                 "user select {string} as District of Claimant",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Claimant Name") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtClaimantName']",
+	                 data.get("Claimant Name"),
+	                 "user enter {string} as claimant name",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Claimant Circumstances") != null) {
+	         Itl.CustomDropdownEvent(
+	                 "//*[contains(@aria-controls,'MainContent_cmbInjured')]",
+	                 "//*[@class='select2-search__field']",
+	                 data.get("Claimant Circumstances"),
+	                 "(//*[contains(@data-select2-id,'MainContent_cmbInjured-result')])",
+	                 "user select {string} as Claimant Circumstances",
+	                 "DROPDOWN",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Expected Claim Amount") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='txtClaimedAmount']",
+	                 data.get("Expected Claim Amount"),
+	                 "user enter {string} as expected claim amount",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Initial Reserve Amount") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='txtClaimantAmount']",
+	                 data.get("Initial Reserve Amount"),
+	                 "user enter {string} as initial reserve amount",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Circumstances of the Loss Event") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtCircums']",
+	                 data.get("Circumstances of the Loss Event"),
+	                 "user enter {string} as Circumstances of the Loss Event",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Reported By") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtClaimReported']",
+	                 data.get("Reported By"),
+	                 "user enter {string} as Reported by",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("First Loss Payee") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='txtPayeeBenefeciary']",
+	                 data.get("First Loss Payee"),
+	                 "user enter {string} as First Loss Payee",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
+
+	     if (data.get("Reported Date") != null) {
+	         Itl.CustomClearSendEvent(
+	                 "//*[@id='MainContent_txtReportedDate']",
+	                 data.get("Reported Date"),
+	                 "user enter {string} as Reported Date",
+	                 "TEXTBOX",
+	                 0
+	         );
+	     }
 	 }
 	 @When ("user select reported time")
 	 public void reportTime() throws InterruptedException {
-		    Itl.CustomClickEvent("//*[@id='MainContent_txtReportedTime']", "user select reported time", "CLICK", 2000);
+		 SeleniumOperations.scrollUp();  
+		 Itl.CustomClickEvent("//*[@id='MainContent_txtReportedTime']", "user select reported time", "CLICK", 2000);
             Itl.ClickEvent("//*[@id='MainContent_txtReportedTime']", "CLICK", 2000);
+	 }
+	 @When ("user select time of loss")
+	 public void TimeOfLoss() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='MainContent_txtAccidentTime']", "user select time of loss", "CLICK", 2000);
+            Itl.ClickEvent("//*[@id='MainContent_txtAccidentTime']", "CLICK", 2000);
 	 }
 	 @When("^user click on insert claimant button$")
 	 public void user_click_on_insert_claimant_button() throws Throwable {
 		 Itl.CustomClickEvent("//*[@id='btnClaimantInsert']", "user click on insert claimant button", "CLICK", 3000);
 	 }
+	 
 
 	 @And ("^user click on update button$")
 	 public void clickOnUpdateButton() throws InterruptedException {
@@ -387,7 +581,32 @@ public class ManageClaims {
 	 public void claimNotestatus(String status) throws InterruptedException {
 			Itl.CustomValidationEvent("//*[text()='1001-New information recorded successfully']", status, "user able to view {string} status after claim note details saved successfully", "VALIDATION", 4000);
 	 }
-	 
+	 @When("user click on claims handler")
+	 public void user_click_on_claimsHandler() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='button_btnMain_lc']", "user click on claims handler", "CLICK", 2000);
+	 }
+	 @When("user click on process claim option")
+	 public void user_click_on_claimoption() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='sort_table']/tbody/tr[1]/td[11]/*[2]/*[2]/*[1]",
+				 "user click on process claim option", "CLICK", 2000);
+	 }
+	 @When("user click on attachment option")
+	 public void user_click_on_attachmentoption() throws InterruptedException {
+		 SeleniumOperations.scrollUp();
+		 Itl.CustomClickEvent("//*[@id='li3']",
+				 "user click on attachment option", "CLICK", 2000);
+	 }
+	 @When("user click on activities option")
+	 public void user_click_on_activitiesoption() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@id='li6']",
+				 "user click on activities option", "CLICK", 2000);
+	 }
+	 @When("user enter {string} as email")
+		public void user_enter_as_email(String email) throws InterruptedException {
+			Itl.CustomClearSendEvent("//*[@id='MainContent_txtContactEmail']", 
+					email, 
+					   "user enter {string} as email", "TEXTBOX", 0);
+		}
 
 	 
 	 

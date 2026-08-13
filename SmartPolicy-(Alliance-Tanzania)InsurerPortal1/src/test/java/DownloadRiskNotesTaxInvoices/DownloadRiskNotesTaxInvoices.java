@@ -4,22 +4,26 @@ import java.util.Hashtable;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import itl.Itl;
 import utility.HTMLReportGenerator;
 import utility.SeleniumOperations;
 
 public class DownloadRiskNotesTaxInvoices {
 
-	@When("^user navigate on operation dropdown menu$")
+	@When("user navigate on operation dropdown menu")
 	public void user_navigate_on_operation_dropdown_menu() throws Throwable {
-	    Object[] input7=new Object[1];
-		input7[0]="(//*[@class='dropdown-toggle'])[1]";
-		SeleniumOperations.clickOnElement(input7);
+	    Itl.CustomNavigateAction("//*[@id='span_Security_lc']", "user navigate on operation dropdown menu", "NAVIGATE", 2000);
+	}
+
+	@When("user navigate on policy management")
+	public void glManagement() throws Throwable {
+	    Itl.CustomNavigateAction("//*[@id='span124']", "user navigate on policy management", "NAVIGATE", 2000);
 	}
 
 	@Then("^user click on Download Risk Notes & Tax Invoices option$")
 	public void user_click_on_Download_Risk_Notes_Tax_Invoices_option() throws Throwable {
 	    Object[] input7=new Object[1];
-		input7[0]="(//*[text()='Download Risk Notes/Tax Invoices'])[1]";
+		input7[0]="//*[@id='span_TwoFactorAuthent_lc']";
 		SeleniumOperations.clickOnElement(input7);
 	}
 

@@ -4,6 +4,7 @@ Feature: Download Risk Notes & Tax Invoices
 Background: 
 
 When user navigate on operation dropdown menu
+When user navigate on policy management
 Then user click on Download Risk Notes & Tax Invoices option
 
 @Risk

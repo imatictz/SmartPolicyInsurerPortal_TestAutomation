@@ -83,4 +83,12 @@ public class EndorsementApproval {
 		   Itl.CustomClickEvent("//*[@id='btnApprove']", "user click on approve button", "CLICK", 2000);
 	 
 	}
+	@Then("user able to view {string} as message")
+	public void user_able_to_view_as_status(String status) throws InterruptedException {
+		Itl.CustomValidationEvent("//*[@class='messenger-message-inner']", 
+				status,
+				"user able to view {string} as message", 
+				"VALIDATION", 
+				0);
+	}
 }

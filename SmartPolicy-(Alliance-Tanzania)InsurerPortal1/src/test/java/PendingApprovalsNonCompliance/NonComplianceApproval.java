@@ -18,7 +18,7 @@ public void user_navigate_on_operation_dropdown_menu() throws Throwable {
 }
 @When("user navigate on approval management option")
 public void user_navigate_on_approval_management_option() throws Throwable {
-    Itl.CustomNavigateAction("//*[@id='MNU_APPROVAL']", "user navigate on approval management option", "NAVIGATE", 2000);
+    Itl.CustomNavigateAction("//*[@id='MNU_APPROVAL']", "user navigate on approval management option", "NAVIGATE", 3000);
 
 }
 @Then("user click on compliance quotation approval option")
@@ -98,6 +98,14 @@ public void user_click_on_approve_button() throws Throwable {
  
 }
 
+@Then("user able to view {string} as message")
+public void user_able_to_view_as_status(String status) throws InterruptedException {
+	Itl.CustomValidationEvent("//*[@class='messenger-message-inner']", 
+			status,
+			"user able to view {string} as message", 
+			"VALIDATION", 
+			0);
+}
 
 	
 }

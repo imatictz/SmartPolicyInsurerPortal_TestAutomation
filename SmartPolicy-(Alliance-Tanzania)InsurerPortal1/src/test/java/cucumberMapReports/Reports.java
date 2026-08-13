@@ -1075,6 +1075,62 @@ public class Reports {
 	public void user_click_to_select_reinsurer_report() throws InterruptedException {
 		 Itl.CustomClickEvent("//*[@value='RPTINS41']", "user click to select Reinsurer Premium Register as report", "CLICK", 5000);
 	}
+	@Then("user click to select Exception Report as report")
+	public void user_click_to_select_ExceptionReport_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS270']", "user click to select Exception Report as report", "CLICK", 5000);
+	}
+	@Then("user click to select Indirect Premiums Receipt as report")
+	public void user_click_to_select_others_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS297']", "user click to select Indirect Premiums Receipt as report", "CLICK", 5000);
+	}
+	@Then("user click to select Sticker Utilization Report as report")
+	public void user_click_to_select_others1_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS12']", "user click to select Sticker Utilization Report as report", "CLICK", 5000);
+	}
+	@Then("user click to select Travel Cession\\/Bordeaux Report as report")
+	public void user_click_to_select_others2_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS76']", "user click to select Travel Cession/Bordeaux Report as report", "CLICK", 5000);
+	}
+	@Then("user click to select Travel Cession\\/Bordeaux Report \\(MAPFRE) as report")
+	public void user_click_to_select_others3_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS82']", "user click to select Travel Cession\\\\/Bordeaux Report \\\\(MAPFRE) as report", "CLICK", 5000);
+	}
+	@Then("user click to select Unearned Premium Reserve as report")
+	public void user_click_to_select_others4_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS91']", "user click to select Unearned Premium Reserve as report", "CLICK", 5000);
+	}
+	@Then("user click to select Unearned Premium Reserve for ceded premium as report")
+	public void user_click_to_select_others5_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS92']", "user click to select Unearned Premium Reserve for ceded premium as report", "CLICK", 5000);
+	}
+	@Then("user click to select User Details as report")
+	public void user_click_to_select_others6_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS121']", "user click to select User Details as report", "CLICK", 5000);
+	}
+	@Then("user click to select Z_REPORT as report")
+	public void user_click_to_select_others7_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS124']", "user click to select Z_REPORT as report", "CLICK", 5000);
+	}
+	@Then("user click to select Daily Debit Notes\\/ Tax Invoices \\(Outstanding wise) as report")
+	public void user_click_to_select_PremiumCollectionReports1_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS110']", "user click to select Daily Debit Notes/ Tax Invoices (Outstanding wise) as report", "CLICK", 5000);
+	}
+	@Then("user click to select Debtors Age Analysis report as report")
+	public void user_click_to_select_PremiumCollectionReports2_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS152']", "user click to select Debtors Age Analysis report as report", "CLICK", 5000);
+	}
+	@Then("user click to select Digital Premium Collection Report \\(Payment Mode Wise) as report")
+	public void user_click_to_select_PremiumCollectionReports3_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS18']", "user click to select Digital Premium Collection Report (Payment Mode Wise) as report", "CLICK", 5000);
+	}
+	@Then("user click to select Mobile Money Transaction as report")
+	public void user_click_to_select_PremiumCollectionReports4_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS300']", "user click to select Mobile Money Transaction as report", "CLICK", 5000);
+	}
+	@Then("user click to select Mobile Money Transactions \\(Branch Wise) as report")
+	public void user_click_to_select_PremiumCollectionReports5_report() throws InterruptedException {
+		 Itl.CustomClickEvent("//*[@value='RPTINS43']", "user click to select Mobile Money Transactions (Branch Wise) as report", "CLICK", 5000);
+	}
 	
 	
 	
